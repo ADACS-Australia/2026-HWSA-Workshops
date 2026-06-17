@@ -67,6 +67,9 @@ contact: 'paul.hancock@curtin.edu.au'
 # Order of episodes in your lesson
 episodes: 
 - introduction.md
+- big-data.md
+- workflows.md
+- reproducible-research.md
 
 # Information for Learners
 learners: 

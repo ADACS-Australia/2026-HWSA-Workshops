@@ -10,7 +10,16 @@
     <loc>https://ADACS-Australia.github.io/2026-HWSA-Workshops/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://ADACS-Australia.github.io/2026-HWSA-Workshops/aio.html</loc>
+  </url>
+  <url>
+    <loc>https://ADACS-Australia.github.io/2026-HWSA-Workshops/big-data.html</loc>
+  </url>
+  <url>
     <loc>https://ADACS-Australia.github.io/2026-HWSA-Workshops/citation.html</loc>
+  </url>
+  <url>
+    <loc>https://ADACS-Australia.github.io/2026-HWSA-Workshops/images.html</loc>
   </url>
   <url>
     <loc>https://ADACS-Australia.github.io/2026-HWSA-Workshops/index.html</loc>
@@ -25,13 +34,28 @@
     <loc>https://ADACS-Australia.github.io/2026-HWSA-Workshops/instructor/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://ADACS-Australia.github.io/2026-HWSA-Workshops/instructor/aio.html</loc>
+  </url>
+  <url>
+    <loc>https://ADACS-Australia.github.io/2026-HWSA-Workshops/instructor/big-data.html</loc>
+  </url>
+  <url>
     <loc>https://ADACS-Australia.github.io/2026-HWSA-Workshops/instructor/citation.html</loc>
+  </url>
+  <url>
+    <loc>https://ADACS-Australia.github.io/2026-HWSA-Workshops/instructor/images.html</loc>
   </url>
   <url>
     <loc>https://ADACS-Australia.github.io/2026-HWSA-Workshops/instructor/index.html</loc>
   </url>
   <url>
+    <loc>https://ADACS-Australia.github.io/2026-HWSA-Workshops/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
     <loc>https://ADACS-Australia.github.io/2026-HWSA-Workshops/instructor/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://ADACS-Australia.github.io/2026-HWSA-Workshops/instructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://ADACS-Australia.github.io/2026-HWSA-Workshops/instructor/profiles.html</loc>
@@ -40,12 +64,30 @@
     <loc>https://ADACS-Australia.github.io/2026-HWSA-Workshops/instructor/reference.html</loc>
   </url>
   <url>
+    <loc>https://ADACS-Australia.github.io/2026-HWSA-Workshops/instructor/reproducible-research.html</loc>
+  </url>
+  <url>
+    <loc>https://ADACS-Australia.github.io/2026-HWSA-Workshops/instructor/workflows.html</loc>
+  </url>
+  <url>
+    <loc>https://ADACS-Australia.github.io/2026-HWSA-Workshops/instructor-notes.html</loc>
+  </url>
+  <url>
     <loc>https://ADACS-Australia.github.io/2026-HWSA-Workshops/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://ADACS-Australia.github.io/2026-HWSA-Workshops/key-points.html</loc>
   </url>
   <url>
     <loc>https://ADACS-Australia.github.io/2026-HWSA-Workshops/profiles.html</loc>
   </url>
   <url>
     <loc>https://ADACS-Australia.github.io/2026-HWSA-Workshops/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://ADACS-Australia.github.io/2026-HWSA-Workshops/reproducible-research.html</loc>
+  </url>
+  <url>
+    <loc>https://ADACS-Australia.github.io/2026-HWSA-Workshops/workflows.html</loc>
   </url>
 </urlset>
