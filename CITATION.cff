@@ -5,7 +5,7 @@
 # ensuring that the author list and other fields remain accurate.
 
 cff-version: 1.2.0
-title: FIXME
+title: HWSA 2026 workshop by ADACS
 message: >-
   Please cite this lesson using the information in this file
   when you refer to it in publications, and/or if you
@@ -13,10 +13,11 @@ message: >-
   training material.
 type: dataset
 authors:
-  - given-names: FIXME
-    family-names: FIXME
+  - given-names: Hancock
+    family-names: Paul
+    email: paul.hancock@curtin.edu.au
+    affiliation: ADACS
+    orcid: 'https://orcid.org/0000-0002-4203-2946'
 abstract: >-
-  FIXME Replace this with a short abstract describing the
-  lesson, e.g. its target audience and main intended
-  learning objectives.
+  Two workshops for the HWSA 2026 conference, one on software and one on data.
 license: CC-BY-4.0
