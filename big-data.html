@@ -214,7 +214,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="introduction.html">1. Using Markdown</a>
+        <a href="introduction.html">1. Introduction</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -223,12 +223,19 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         2. Big Data
         </span>
-      
+      </button>
     </div><!--/div.accordion-header-->
+
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
+      <div class="accordion-body">
+        <ul><li><a href="#big-data-in-astronomy-scale-barriers-and-implications">Big Data in Astronomy: Scale, Barriers, and Implications</a></li>
+        </ul></div><!--/div.accordion-body-->
+    </div><!--/div.accordion-collapse-->
 
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -300,7 +307,7 @@
       <div class="d-none d-sm-none d-md-block">
         <a class="chapter-link" href="introduction.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: Using Markdown
+          Previous: Introduction
         </a>
         <a class="chapter-link float-end" href="workflows.html" rel="next">
           Next: Workflows...
@@ -309,7 +316,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Big Data</h1>
-        <p>Last updated on 2026-06-17 |
+        <p>Last updated on 2026-06-18 |
 
         <a href="https://github.com/ADACS-Australia/2026-HWSA-Workshops/edit/main/episodes/big-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -350,14 +357,156 @@ context.</li>
 </div>
 </div>
 </div>
+<section><h2 class="section-heading" id="big-data-in-astronomy-scale-barriers-and-implications">Big Data in Astronomy: Scale, Barriers, and Implications<a class="anchor" aria-label="anchor" href="#big-data-in-astronomy-scale-barriers-and-implications"></a></h2>
+<hr class="half-width"><div class="section level3">
+<h3 id="a-familiar-workflow">A familiar workflow<a class="anchor" aria-label="anchor" href="#a-familiar-workflow"></a></h3>
+<p>You download a dataset to your laptop. You explore it interactively.
+You write some code to run analysis. Eventually, you produce a figure or
+table.</p>
+<div class="mermaid">
+<p>flowchart LR subgraph prep [“Data Preparation” ] A[Download Data]
+A–&gt;B[Clean Data] end subgraph analysis [“Data Analysis”]
+C[“Visualise”] C–&gt;D[“Analyse”] D–&gt;E[“Ask/Answer Questions”] end
+subgraph com [“Communicate”] F[“Report”] H[“Paper”] end prep –&gt;
+analysis –&gt; com</p>
+</div>
+<p>Most research workflows start like this, although typically there are
+lots of loop backs, re-runs and restarts involved. However, at some
+point this stops working.</p>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>Big data begins when your normal way of working breaks.</p>
+</div>
+</div>
+</div>
+<p>For example, the above workflow could break because: 1. The data is
+too large to store on your local machine, 2. The cleaning/filtering
+process takes many hours to complete, 3. The data has high
+dimensionality or connectivity, and is difficult to summarize or
+visualise with existing tools, 4. Your data can’t be presented as a
+table or image, and thus is difficult to share in a publication.</p>
+<p>Each of these breakdowns have simple solutions with significant
+costs: 1. You work on a subset of the available data. You get results
+but there is a question around generalization. Small effect and subtle
+features are not evident in smaller populations, and you miss potential
+discoveries. 2. You follow “standard practice” to do a single pass data
+processing step. When you find errors or strange features in your
+processed data you employ post-hoc analysis ‘corrections’ to try and
+account for these features. It becomes difficult to clearly separate
+real features from data processing artefacts. You (and others) are less
+confident in your results. 3. You only view/compare a few features at a
+time to reduce complexity. Your results are limited to correlations
+between the subset of feature combinations that you have decided to use.
+Multi-colinear relationships, or even non-linear relationships are not
+explored and you miss out on a deeper insight into the problem at hand.
+4. You present snapshots of your data in your publication, and leave a
+data sharing note that asks people to contact you in order to have
+access to the data you used. (1 year later you move institutes and loose
+that particular HDD).</p>
+<p>The “solutions” above are clearly not ideal, but, sadly, they are
+more common than you would hope. You won’t find such honest descriptions
+or reasoning in most papers, but talk to someone at a conference and
+you’ll soon see how common these solutions are.</p>
+<div id="quick-challenge-3mins" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="quick-challenge-3mins" class="callout-inner">
+<h3 class="callout-title">Quick challenge (3mins)</h3>
+<div class="callout-content">
+<p>What alternatives can you identify for the 4 “solutions” outlined
+above. Focus on the high level plan rather than detailed
+implementation.</p>
+<p>Use <a href="wooclap">Wooclap</a> to answer.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="what-actually-goes-wrong">What actually goes wrong?<a class="anchor" aria-label="anchor" href="#what-actually-goes-wrong"></a></h3>
+<p>Working with big data is not just difficult, it is different. The
+challenge is not that tasks become slower, but that some things stop
+being possible altogether. The great news is that the converse is often
+also true - if you can solve some big data problems, you start to unlock
+new capabilities.</p>
+<p>When you have big data problems the following things happen: 1. You
+can’t open or inspect your data * Files are too large. Data is
+distributed. * You cannot “just take a look””“. 2. You can’t iterate
+quickly * A small change might require hours or days to re-run. *
+Exploration becomes expensive. 3. You can’t rerun your analysis reliably
+* Pipelines become complex, fragile, and hard to reproduce. 4. You can’t
+keep everything * Intermediate results, temporary files, and even raw
+data may be discarded or inaccessible.</p>
+<p>With big data, you stop interacting with the data directly. Instead,
+you are interacting with the process.</p>
+<p>Our new science workflow now looks like this:</p>
+<div class="mermaid">
+<p>flowchart LR A[“Data”] workflow [“(Automated) Workflow” ]
+R[“Results”] A–&gt;workflow–&gt;R</p>
+</div>
+<p>We have taken two steps forward in that we now have an automated and
+hopefully robust and reproducible workflow that we can rely on. However
+we also have taken a step back in that we are now less directly working
+with the data at each stage.</p>
+</div>
+<div class="section level3">
+<h3 id="common-big-data-patterns-in-astronomy">Common big data patterns in astronomy<a class="anchor" aria-label="anchor" href="#common-big-data-patterns-in-astronomy"></a></h3>
+<p>Modern astronomy is a data-intensive science. In many ways astronomy
+is leading other domains in it’s embrace of new technologies and
+techniques thanks to telescopes and simulations that produce data at
+scales and rates that fundamentally change how research is done. Some
+common big data patterns that have been adopted in astronomy are:</p>
+<ol style="list-style-type: decimal"><li>Streaming data (eg, time-domain astronomy)</li>
+</ol><ul><li>Data arrives continuously.</li>
+<li>Decisions must be made in real time.</li>
+<li>You cannot store everything.</li>
+<li>You cannot inspect everything by hand.</li>
+</ul><ol start="2" style="list-style-type: decimal"><li>Data that cannot be downloaded</li>
+</ol><ul><li>Many datasets are simply too large to move.</li>
+<li>Analysis happens where the data lives.</li>
+<li>Attach an HPC to an archive, rather than the inverse.</li>
+</ul><ol start="3" style="list-style-type: decimal"><li>Pipelines as the primary interface</li>
+</ol><ul><li>The raw data is rarely used directly.</li>
+<li>Complex pipelines produce calibrated ‘science ready’ data
+products.</li>
+</ul><ol start="4" style="list-style-type: decimal"><li>Long-lived datasets and data releases</li>
+</ol><ul><li>Results depend on which version of the data you used, and how it was
+processed.</li>
+<li>Data and software versioning becomes very important for
+reproducibility.</li>
+</ul><p>As a result we have a frequent data access pattern, where the user is
+far from the raw data and will often only retrieve a filtered subset of
+the processed data for their particular research need.</p>
+<div class="mermaid">
+<p>flowchart LR Observation –&gt; Pipeline –&gt; Archive –&gt; Platform
+–&gt; User Simulation –&gt; Pipeline</p>
+</div>
+</div>
+<div class="section level3">
+<h3 id="why-this-matters-to-you">Why this matters to you<a class="anchor" aria-label="anchor" href="#why-this-matters-to-you"></a></h3>
+<p>You may not be working with petabytes of data. But you are likely
+already encountering the same underlying problems:</p>
+<ul><li>combining multiple datasets</li>
+<li>re-running analyses late in your project</li>
+<li>scaling an approach that worked on a small sample</li>
+</ul><div class="quote">
+<p>Big data often requires specialized hardware or software to store,
+transmit, process, and visualize.</p>
+</div>
+<p>When does your research transition from using data to big data?</p>
+<p>How does big data change the way we conduct research?</p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-
-
-
-      </div> <!-- / div.lesson-content -->
+</div>
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="introduction.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="workflows.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -366,7 +515,7 @@ any links that you are not going to use.
       <div class="d-none d-sm-none d-md-block">
         <a class="chapter-link" href="introduction.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: Using Markdown
+          Previous: Introduction
         </a>
         <a class="chapter-link float-end" href="workflows.html" rel="next">
           Next: Workflows...
@@ -420,8 +569,8 @@ any links that you are not going to use.
   "url": "https://ADACS-Australia.github.io/2026-HWSA-Workshops/big-data.html",
   "identifier": "https://ADACS-Australia.github.io/2026-HWSA-Workshops/big-data.html",
   "dateCreated": "2026-06-17",
-  "dateModified": "2026-06-17",
-  "datePublished": "2026-06-17"
+  "dateModified": "2026-06-18",
+  "datePublished": "2026-06-18"
 }
 
   </script><script>
