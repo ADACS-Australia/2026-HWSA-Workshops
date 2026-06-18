@@ -8,3 +8,5 @@ any links that you are not going to use.
 [rstudio]: https://www.rstudio.com/
 [carpentries-workbench]: https://carpentries.github.io/sandpaper-docs/
 
+[wooclap]: https://wooclap.com
+[adacs]: https://adacs.org.au
