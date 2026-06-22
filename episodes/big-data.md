@@ -22,35 +22,10 @@ exercises: 20 # exercise time in minutes
 
 ## Big Data in Astronomy: Scale, Barriers, and Implications
 
-### A familiar workflow
+## What is big data?
 
-You download a dataset to your laptop.
-You explore it interactively.
-You write some code to run analysis.
-Eventually, you produce a figure or table.
-
-```mermaid
-
-flowchart LR;
-    subgraph prep ["Data Preparation" ];
-        A[Download Data];
-        A-->B[Clean Data];
-    end;
-    subgraph analysis ["Data Analysis"];
-        C["Visualise"];
-        C-->D["Analyse"];
-        D-->E["Ask/Answer Questions"];
-    end;
-    subgraph com ["Communicate"];
-        F["Report"];
-        H["Paper"];
-    end;
-    prep --> analysis --> com;
-```
-
-Most research workflows start like this, although typically there are lots of loop backs, re-runs and restarts involved.
-However, at some point this stops working.
-
+Despite the name, big data is not all about the petabytes.
+In fact, the "big" in big data is more about the scale of the problems caused, than the size of the data itself.
 
 ::: callout
 
@@ -58,16 +33,19 @@ Big data begins when your normal way of working breaks.
 
 :::
 
-For example, the above workflow could break because:
+Essentially you know you need to engage in big data thinking when your establisehd workflows break.
+Sometimes the solutions require new hardware or software, but sometimes you also need to change how you think about a problem or even change the questions that you are asking.
+Your workflows may need changing or updating when any of the items listed in our example workflow become difficult.
+For example, our normal ways of working could break because:
 
-1. The data is too large to store on your local machine,
+1. The data are too large to store on your local machine,
 2. The cleaning/filtering process takes many hours to complete,
 3. The data has high dimensionality or connectivity, and is difficult to summarize or visualise with existing tools,
 4. Your data can't be presented as a table or image, and thus is difficult to share in a publication.
 
 Each of these breakdowns have simple solutions with significant costs:
 
-1. You work on a subset of the available data. You get results but there is a question around generalization. Small effect and subtle features are not evident in smaller populations, and you miss potential discoveries.
+1. You work on a subset of the available data. You get results but there is a question around generalization. Small effects and subtle features are not evident in smaller populations, and you miss potential discoveries.
 2. You follow "standard practice" to do a single pass data processing step. When you find errors or strange features in your processed data you employ post-hoc analysis 'corrections' to try and account for these features. It becomes difficult to clearly separate real features from data processing artefacts. You (and others) are less confident in your results.
 3. You only view/compare a few features at a time to reduce complexity. Your results are limited to correlations between the subset of feature combinations that you have decided to use. Multi-colinear relationships, or even non-linear relationships are not explored and you miss out on a deeper insight into the problem at hand.
 4. You present snapshots of your data in your publication, and leave a data sharing note that asks people to contact you in order to have access to the data you used. (1 year later you move institutes and loose that particular HDD).
@@ -78,12 +56,14 @@ You won't find such honest descriptions or reasoning in most papers, but talk to
 
 ::: challenge
 
-## Quick challenge (3mins)
+## Tools of the trade
 
-What alternatives can you identify for the 4 "solutions" outlined above.
-Focus on the high level plan rather than detailed implementation.
+In your groups discuss:
+1. What software do you use in your research for the various activities listed in our workflow?
+2. What kinds of big data would make these tools less or not useful?
+3. Do you have alternatives that you could swap to if you needed to work on big data?
 
-Use [Wooclap] to answer.
+Use [Wooclap] to list the name of your tool, and we'll select some to explore further as a class.
 
 :::
 
@@ -98,7 +78,7 @@ When you have big data problems the following things happen:
 
 1. You can't open or inspect your data
     * Files are too large. Data is distributed.
-    * You cannot "just take a look"”".
+    * You cannot "just take a look".
 2. You can't iterate quickly
     * A small change might require hours or days to re-run.
     * Exploration becomes expensive.
@@ -123,6 +103,18 @@ flowchart LR;
 
 We have taken two steps forward in that we now have an automated and hopefully robust and reproducible workflow that we can rely on.
 However we also have taken a step back in that we are now less directly working with the data at each stage.
+
+
+::: callout
+## Big Data in the AT20G survey (ca 2010)
+
+The Australia Telescope 20GHz (AT20G) survey was an ambitious survey inspired by a new wide-band correlator that was installed at the Australia Telescope Compact Array.
+The correlator is the piece of hardware that combines signals from different parts of a radio telescope, digitizes the product, and records it to disk.
+At the time the ATCA systems had a recording bandwidth of only 128MHz, while this new wideband correlator had a whopping 8GHz bandwidth.
+Since sensitivity is proportional to bandwidth, this represented a portential 32x (?) increase in sensitivity.
+This increased sensivitiy corresponds to a reduction in time required to survey an area of sky to a given flux density limit, and so this new correlator made it possible to conduct a survey of the southrn sky at 20GHz with weeks of observations rather than years.
+
+:::
 
 ### Common big data patterns in astronomy
 
@@ -165,7 +157,4 @@ But you are likely already encountering the same underlying problems:
 - re-running analyses late in your project
 - scaling an approach that worked on a small sample
 
-When does your research transition from using data to big data?
-
-How does big data change the way we conduct research?
 
