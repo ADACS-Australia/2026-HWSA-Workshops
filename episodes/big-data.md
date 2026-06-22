@@ -83,7 +83,7 @@ You won't find such honest descriptions or reasoning in most papers, but talk to
 What alternatives can you identify for the 4 "solutions" outlined above.
 Focus on the high level plan rather than detailed implementation.
 
-Use [Wooclap](wooclap) to answer.
+Use [Wooclap] to answer.
 
 :::
 
