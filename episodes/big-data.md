@@ -116,7 +116,7 @@ Our new science workflow now looks like this:
 
 flowchart LR;
     A["Data"];
-    workflow ["(Automated) Workflow"];
+    workflow["(Automated) Workflow"];
     R["Results"];
     A-->workflow-->R;
 ```
