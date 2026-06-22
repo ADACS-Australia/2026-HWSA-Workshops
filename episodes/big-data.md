@@ -29,7 +29,7 @@ You explore it interactively.
 You write some code to run analysis.
 Eventually, you produce a figure or table.
 
-::: mermaid
+```mermaid
 
 flowchart LR;
     subgraph prep ["Data Preparation" ];
@@ -46,8 +46,7 @@ flowchart LR;
         H["Paper"];
     end;
     prep --> analysis --> com;
-
-:::
+```
 
 Most research workflows start like this, although typically there are lots of loop backs, re-runs and restarts involved.
 However, at some point this stops working.
@@ -113,15 +112,14 @@ Instead, you are interacting with the process.
 
 Our new science workflow now looks like this:
 
-::: mermaid
+```mermaid
 
 flowchart LR;
     A["Data"];
     workflow ["(Automated) Workflow"];
     R["Results"];
     A-->workflow-->R;
-
-:::
+```
 
 We have taken two steps forward in that we now have an automated and hopefully robust and reproducible workflow that we can rely on.
 However we also have taken a step back in that we are now less directly working with the data at each stage.
@@ -151,13 +149,12 @@ Some common big data patterns that have been adopted in astronomy are:
 As a result we have a frequent data access pattern, where the user is far from the raw data and will often only retrieve a filtered subset of the processed data for their particular research need.
 
 
-::: mermaid
+```mermaid
 
 flowchart LR;
     Observation --> Pipeline --> Archive --> Platform --> User;
     Simulation --> Pipeline;
-
-:::
+```
 
 
 ### Why this matters to you
