@@ -363,13 +363,22 @@ context.</li>
 <p>You download a dataset to your laptop. You explore it interactively.
 You write some code to run analysis. Eventually, you produce a figure or
 table.</p>
-<div class="mermaid">
-<p>flowchart LR; subgraph prep [“Data Preparation” ]; A[Download Data];
-A–&gt;B[Clean Data]; end; subgraph analysis [“Data Analysis”];
-C[“Visualise”]; C–&gt;D[“Analyse”]; D–&gt;E[“Ask/Answer Questions”];
-end; subgraph com [“Communicate”]; F[“Report”]; H[“Paper”]; end; prep
-–&gt; analysis –&gt; com;</p>
-</div>
+<pre class="mermaid"><code>
+flowchart LR;
+    subgraph prep ["Data Preparation" ];
+        A[Download Data];
+        A--&gt;B[Clean Data];
+    end;
+    subgraph analysis ["Data Analysis"];
+        C["Visualise"];
+        C--&gt;D["Analyse"];
+        D--&gt;E["Ask/Answer Questions"];
+    end;
+    subgraph com ["Communicate"];
+        F["Report"];
+        H["Paper"];
+    end;
+    prep --&gt; analysis --&gt; com;</code></pre>
 <p>Most research workflows start like this, although typically there are
 lots of loop backs, re-runs and restarts involved. However, at some
 point this stops working.</p>
@@ -458,10 +467,12 @@ discarded or inaccessible.</li>
 </ol><p>With big data, you stop interacting with the data directly. Instead,
 you are interacting with the process.</p>
 <p>Our new science workflow now looks like this:</p>
-<div class="mermaid">
-<p>flowchart LR; A[“Data”]; workflow [“(Automated) Workflow”];
-R[“Results”]; A–&gt;workflow–&gt;R;</p>
-</div>
+<pre class="mermaid"><code>
+flowchart LR;
+    A["Data"];
+    workflow ["(Automated) Workflow"];
+    R["Results"];
+    A--&gt;workflow--&gt;R;</code></pre>
 <p>We have taken two steps forward in that we now have an automated and
 hopefully robust and reproducible workflow that we can rely on. However
 we also have taken a step back in that we are now less directly working
@@ -499,10 +510,10 @@ reproducibility.</li>
 </ol><p>As a result we have a frequent data access pattern, where the user is
 far from the raw data and will often only retrieve a filtered subset of
 the processed data for their particular research need.</p>
-<div class="mermaid">
-<p>flowchart LR; Observation –&gt; Pipeline –&gt; Archive –&gt; Platform
-–&gt; User; Simulation –&gt; Pipeline;</p>
-</div>
+<pre class="mermaid"><code>
+flowchart LR;
+    Observation --&gt; Pipeline --&gt; Archive --&gt; Platform --&gt; User;
+    Simulation --&gt; Pipeline;</code></pre>
 </div>
 <div class="section level3">
 <h3 id="why-this-matters-to-you">Why this matters to you<a class="anchor" aria-label="anchor" href="#why-this-matters-to-you"></a></h3>
