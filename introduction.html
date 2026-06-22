@@ -225,6 +225,7 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#introduction">Introduction</a></li>
+<li><a href="#background">Background</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -316,7 +317,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Introduction</h1>
-        <p>Last updated on 2026-06-18 |
+        <p>Last updated on 2026-06-22 |
 
         <a href="https://github.com/ADACS-Australia/2026-HWSA-Workshops/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -328,29 +329,6 @@
 
         
 
-<div class="overview card">
-<h2 class="card-header">Overview</h2>
-<div class="row g-0">
-<div class="col-md-4">
-<div class="card-body">
-<div class="inner">
-<h3 class="card-title">Questions</h3>
-<ul><li>What are we doing today?</li>
-</ul></div>
-</div>
-</div>
-<div class="col-md-8">
-<div class="card-body">
-<div class="inner bordered">
-<h3 class="card-title">Objectives</h3>
-<ul><li>Explain how to use markdown with The Carpentries Workbench</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
-</ul></div>
-</div>
-</div>
-</div>
-</div>
 <section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a></h2>
 <hr class="half-width"><p>At this HWSA workshop, <a href="https://adacs.org.au" class="external-link">ADACS</a> will
 be delivering two sessions:</p>
@@ -361,11 +339,64 @@ delivered on Saturday morning from 11:30-12:30.</li>
 </ul><p>Throughout these sessions we will be working in small groups of 3-5
 people. Within your groups you’ll often be asked to discuss a topic,
 summarize your answers, and then use <a href="https://wooclap.com" class="external-link">Wooclap</a> to share your answers with the
-class. <!--
+class.</p>
+</section><section><h2 class="section-heading" id="background">Background<a class="anchor" aria-label="anchor" href="#background"></a></h2>
+<hr class="half-width"><p>In this workshop we will be returning to the following flow chart as
+an example of a generic workflow for research:</p>
+<pre class="mermaid"><code>flowchart LR
+    accTitle: {A generic research workflow}
+    accDescr: {A generic research workflow with 4 main sections: obtaining data, preparing data, analyzing data, and communicating results.}
+    subgraph obtain ["Obtain Data"]
+        direction LR
+        a["observe"]
+        b["simulate"]
+        c["literature search"]
+        d["download data"]
+        e["..."]
+    end
+    subgraph prepare ["Prepare Data"]
+        direction LR
+        f["clean"]
+        g["filter"]
+        h["aggregate"]
+        i["classify"]
+        j["process"]
+        k["..."]
+    end
+    subgraph analyse ["Analyze Data"]
+        direction LR
+        l["visulaize"]
+        m["describe"]
+        n["model"]
+        o["test hypothesis"]
+        p["draw conclusions"]
+        q["..."]
+    end
+    subgraph publish ["Communicate Results"]
+        direction LR
+        r["article / paper"]
+        s["methods / code"]
+        t["evidence / data"]
+        u["..."]
+    end
+    obtain --&gt; prepare --&gt; analyse --&gt; publish</code></pre>
+<p>The workflow above is intentionally generic and hopefully you have
+experience in doing many of the activities described. In your research
+some or all of the above will be done “by hand” (that is,
+interactively), at least initially, using existing tools and your local
+machine (your laptop or work desktop).</p>
+<p>The advent of “Big Data” in astronomy hasn’t fundamentally changed
+what the above workflow looks like, however it does change how each of
+the steps are preformed. This will be the focus of today’s workshop:</p>
+<ol style="list-style-type: decimal"><li>What is big data, and how does it change how I do research?</li>
+<li>How can we better design, execute, and evaluate workflows?</li>
+<li>How do we maintain research best practice when working with big
+data? <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- --></p>
-</section></div> <!-- / div.lesson-content -->
+ -->
+</li>
+</ol></section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="big-data.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -428,7 +459,7 @@ any links that you are not going to use.
   "url": "https://ADACS-Australia.github.io/2026-HWSA-Workshops/introduction.html",
   "identifier": "https://ADACS-Australia.github.io/2026-HWSA-Workshops/introduction.html",
   "dateCreated": "2026-06-17",
-  "dateModified": "2026-06-18",
+  "dateModified": "2026-06-22",
   "datePublished": "2026-06-22"
 }
 

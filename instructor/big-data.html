@@ -234,6 +234,7 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#big-data-in-astronomy-scale-barriers-and-implications">Big Data in Astronomy: Scale, Barriers, and Implications</a></li>
+<li><a href="#what-is-big-data">What is big data?</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -360,30 +361,10 @@ context.</li>
 </div>
 </div>
 <section><h2 class="section-heading" id="big-data-in-astronomy-scale-barriers-and-implications">Big Data in Astronomy: Scale, Barriers, and Implications<a class="anchor" aria-label="anchor" href="#big-data-in-astronomy-scale-barriers-and-implications"></a></h2>
-<hr class="half-width"><div class="section level3">
-<h3 id="a-familiar-workflow">A familiar workflow<a class="anchor" aria-label="anchor" href="#a-familiar-workflow"></a></h3>
-<p>You download a dataset to your laptop. You explore it interactively.
-You write some code to run analysis. Eventually, you produce a figure or
-table.</p>
-<pre class="mermaid"><code>
-flowchart LR;
-    subgraph prep ["Data Preparation" ];
-        A[Download Data];
-        A--&gt;B[Clean Data];
-    end;
-    subgraph analysis ["Data Analysis"];
-        C["Visualise"];
-        C--&gt;D["Analyse"];
-        D--&gt;E["Ask/Answer Questions"];
-    end;
-    subgraph com ["Communicate"];
-        F["Report"];
-        H["Paper"];
-    end;
-    prep --&gt; analysis --&gt; com;</code></pre>
-<p>Most research workflows start like this, although typically there are
-lots of loop backs, re-runs and restarts involved. However, at some
-point this stops working.</p>
+<hr class="half-width"></section><section><h2 class="section-heading" id="what-is-big-data">What is big data?<a class="anchor" aria-label="anchor" href="#what-is-big-data"></a></h2>
+<hr class="half-width"><p>Despite the name, big data is not all about the petabytes. In fact,
+the “big” in big data is more about the scale of the problems caused,
+than the size of the data itself.</p>
 <div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -395,8 +376,14 @@ point this stops working.</p>
 </div>
 </div>
 </div>
-<p>For example, the above workflow could break because:</p>
-<ol style="list-style-type: decimal"><li>The data is too large to store on your local machine,</li>
+<p>Essentially you know you need to engage in big data thinking when
+your establisehd workflows break. Sometimes the solutions require new
+hardware or software, but sometimes you also need to change how you
+think about a problem or even change the questions that you are asking.
+Your workflows may need changing or updating when any of the items
+listed in our example workflow become difficult. For example, our normal
+ways of working could break because:</p>
+<ol style="list-style-type: decimal"><li>The data are too large to store on your local machine,</li>
 <li>The cleaning/filtering process takes many hours to complete,</li>
 <li>The data has high dimensionality or connectivity, and is difficult
 to summarize or visualise with existing tools,</li>
@@ -405,7 +392,7 @@ difficult to share in a publication.</li>
 </ol><p>Each of these breakdowns have simple solutions with significant
 costs:</p>
 <ol style="list-style-type: decimal"><li>You work on a subset of the available data. You get results but
-there is a question around generalization. Small effect and subtle
+there is a question around generalization. Small effects and subtle
 features are not evident in smaller populations, and you miss potential
 discoveries.</li>
 <li>You follow “standard practice” to do a single pass data processing
@@ -427,19 +414,21 @@ that particular HDD).</li>
 more common than you would hope. You won’t find such honest descriptions
 or reasoning in most papers, but talk to someone at a conference and
 you’ll soon see how common these solutions are.</p>
-<div id="quick-challenge-3mins" class="callout discussion">
+<div id="tools-of-the-trade" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <span class="callout-header">Discussion</span>
-<div id="quick-challenge-3mins" class="callout-inner">
-<h3 class="callout-title">Quick challenge (3mins)</h3>
+<div id="tools-of-the-trade" class="callout-inner">
+<h3 class="callout-title">Tools of the trade</h3>
 <div class="callout-content">
-<p>What alternatives can you identify for the 4 “solutions” outlined
-above. Focus on the high level plan rather than detailed
-implementation.</p>
-<p>Use <a href="wooclap">Wooclap</a> to answer.</p>
-</div>
+<p>In your groups discuss: 1. What software do you use in your research
+for the various activities listed in our workflow? 2. What kinds of big
+data would make these tools less or not useful? 3. Do you have
+alternatives that you could swap to if you needed to work on big
+data?</p>
+<p>Use <a href="https://wooclap.com" class="external-link">Wooclap</a> to list the name of
+your tool, and we’ll select some to explore further as a class.</p>
 </div>
 </div>
 </div>
@@ -453,7 +442,7 @@ new capabilities.</p>
 <p>When you have big data problems the following things happen:</p>
 <ol style="list-style-type: decimal"><li>You can’t open or inspect your data
 <ul><li>Files are too large. Data is distributed.</li>
-<li>You cannot “just take a look””“.</li>
+<li>You cannot “just take a look”.</li>
 </ul></li>
 <li>You can’t iterate quickly
 <ul><li>A small change might require hours or days to re-run.</li>
@@ -472,13 +461,37 @@ you are interacting with the process.</p>
 <pre class="mermaid"><code>
 flowchart LR;
     A["Data"];
-    workflow ["(Automated) Workflow"];
+    workflow["(Automated) Workflow"];
     R["Results"];
     A--&gt;workflow--&gt;R;</code></pre>
 <p>We have taken two steps forward in that we now have an automated and
 hopefully robust and reproducible workflow that we can rely on. However
 we also have taken a step back in that we are now less directly working
 with the data at each stage.</p>
+<div id="big-data-in-the-at20g-survey-ca-2010" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="big-data-in-the-at20g-survey-ca-2010" class="callout-inner">
+<h3 class="callout-title">Big Data in the AT20G survey (ca 2010)</h3>
+<div class="callout-content">
+<p>The Australia Telescope 20GHz (AT20G) survey was an ambitious survey
+inspired by a new wide-band correlator that was installed at the
+Australia Telescope Compact Array. The correlator is the piece of
+hardware that combines signals from different parts of a radio
+telescope, digitizes the product, and records it to disk. At the time
+the ATCA systems had a recording bandwidth of only 128MHz, while this
+new wideband correlator had a whopping 8GHz bandwidth. Since sensitivity
+is proportional to bandwidth, this represented a portential 32x (?)
+increase in sensitivity. This increased sensivitiy corresponds to a
+reduction in time required to survey an area of sky to a given flux
+density limit, and so this new correlator made it possible to conduct a
+survey of the southrn sky at 20GHz with weeks of observations rather
+than years.</p>
+</div>
+</div>
+</div>
 </div>
 <div class="section level3">
 <h3 id="common-big-data-patterns-in-astronomy">Common big data patterns in astronomy<a class="anchor" aria-label="anchor" href="#common-big-data-patterns-in-astronomy"></a></h3>
@@ -524,13 +537,10 @@ already encountering the same underlying problems:</p>
 <ul><li>combining multiple datasets</li>
 <li>re-running analyses late in your project</li>
 <li>scaling an approach that worked on a small sample</li>
-</ul><p>When does your research transition from using data to big data?</p>
-<p>How does big data change the way we conduct research?</p>
-<!--
+</ul><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- -->
-</div>
+ --></div>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/introduction.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
