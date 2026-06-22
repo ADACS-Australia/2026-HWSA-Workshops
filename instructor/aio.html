@@ -406,7 +406,7 @@ any links that you are not going to use.
  --></p>
 </section></section><section id="aio-big-data"><p>Content from <a href="big-data.html">Big Data</a></p>
 <hr>
-<p>Last updated on 2026-06-18 |
+<p>Last updated on 2026-06-22 |
 
         <a href="https://github.com/ADACS-Australia/2026-HWSA-Workshops/edit/main/episodes/big-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 40 minutes</p>
@@ -456,11 +456,11 @@ context.</li>
 You write some code to run analysis. Eventually, you produce a figure or
 table.</p>
 <div class="mermaid">
-<p>flowchart LR subgraph prep [“Data Preparation” ] A[Download Data]
-A–&gt;B[Clean Data] end subgraph analysis [“Data Analysis”]
-C[“Visualise”] C–&gt;D[“Analyse”] D–&gt;E[“Ask/Answer Questions”] end
-subgraph com [“Communicate”] F[“Report”] H[“Paper”] end prep –&gt;
-analysis –&gt; com</p>
+<p>flowchart LR; subgraph prep [“Data Preparation” ]; A[Download Data];
+A–&gt;B[Clean Data]; end; subgraph analysis [“Data Analysis”];
+C[“Visualise”]; C–&gt;D[“Analyse”]; D–&gt;E[“Ask/Answer Questions”];
+end; subgraph com [“Communicate”]; F[“Report”]; H[“Paper”]; end; prep
+–&gt; analysis –&gt; com;</p>
 </div>
 <p>Most research workflows start like this, although typically there are
 lots of loop backs, re-runs and restarts involved. However, at some
@@ -476,30 +476,38 @@ point this stops working.</p>
 </div>
 </div>
 </div>
-<p>For example, the above workflow could break because: 1. The data is
-too large to store on your local machine, 2. The cleaning/filtering
-process takes many hours to complete, 3. The data has high
-dimensionality or connectivity, and is difficult to summarize or
-visualise with existing tools, 4. Your data can’t be presented as a
-table or image, and thus is difficult to share in a publication.</p>
+<p>For example, the above workflow could break because:</p>
+<ol style="list-style-type: decimal">
+<li>The data is too large to store on your local machine,</li>
+<li>The cleaning/filtering process takes many hours to complete,</li>
+<li>The data has high dimensionality or connectivity, and is difficult
+to summarize or visualise with existing tools,</li>
+<li>Your data can’t be presented as a table or image, and thus is
+difficult to share in a publication.</li>
+</ol>
 <p>Each of these breakdowns have simple solutions with significant
-costs: 1. You work on a subset of the available data. You get results
-but there is a question around generalization. Small effect and subtle
+costs:</p>
+<ol style="list-style-type: decimal">
+<li>You work on a subset of the available data. You get results but
+there is a question around generalization. Small effect and subtle
 features are not evident in smaller populations, and you miss potential
-discoveries. 2. You follow “standard practice” to do a single pass data
-processing step. When you find errors or strange features in your
-processed data you employ post-hoc analysis ‘corrections’ to try and
-account for these features. It becomes difficult to clearly separate
-real features from data processing artefacts. You (and others) are less
-confident in your results. 3. You only view/compare a few features at a
-time to reduce complexity. Your results are limited to correlations
-between the subset of feature combinations that you have decided to use.
-Multi-colinear relationships, or even non-linear relationships are not
-explored and you miss out on a deeper insight into the problem at hand.
-4. You present snapshots of your data in your publication, and leave a
+discoveries.</li>
+<li>You follow “standard practice” to do a single pass data processing
+step. When you find errors or strange features in your processed data
+you employ post-hoc analysis ‘corrections’ to try and account for these
+features. It becomes difficult to clearly separate real features from
+data processing artefacts. You (and others) are less confident in your
+results.</li>
+<li>You only view/compare a few features at a time to reduce complexity.
+Your results are limited to correlations between the subset of feature
+combinations that you have decided to use. Multi-colinear relationships,
+or even non-linear relationships are not explored and you miss out on a
+deeper insight into the problem at hand.</li>
+<li>You present snapshots of your data in your publication, and leave a
 data sharing note that asks people to contact you in order to have
 access to the data you used. (1 year later you move institutes and loose
-that particular HDD).</p>
+that particular HDD).</li>
+</ol>
 <p>The “solutions” above are clearly not ideal, but, sadly, they are
 more common than you would hope. You won’t find such honest descriptions
 or reasoning in most papers, but talk to someone at a conference and
@@ -528,20 +536,38 @@ challenge is not that tasks become slower, but that some things stop
 being possible altogether. The great news is that the converse is often
 also true - if you can solve some big data problems, you start to unlock
 new capabilities.</p>
-<p>When you have big data problems the following things happen: 1. You
-can’t open or inspect your data * Files are too large. Data is
-distributed. * You cannot “just take a look””“. 2. You can’t iterate
-quickly * A small change might require hours or days to re-run. *
-Exploration becomes expensive. 3. You can’t rerun your analysis reliably
-* Pipelines become complex, fragile, and hard to reproduce. 4. You can’t
-keep everything * Intermediate results, temporary files, and even raw
-data may be discarded or inaccessible.</p>
+<p>When you have big data problems the following things happen:</p>
+<ol style="list-style-type: decimal">
+<li>You can’t open or inspect your data
+<ul>
+<li>Files are too large. Data is distributed.</li>
+<li>You cannot “just take a look””“.</li>
+</ul>
+</li>
+<li>You can’t iterate quickly
+<ul>
+<li>A small change might require hours or days to re-run.</li>
+<li>Exploration becomes expensive.</li>
+</ul>
+</li>
+<li>You can’t rerun your analysis reliably
+<ul>
+<li>Pipelines become complex, fragile, and hard to reproduce.</li>
+</ul>
+</li>
+<li>You can’t keep everything
+<ul>
+<li>Intermediate results, temporary files, and even raw data may be
+discarded or inaccessible.</li>
+</ul>
+</li>
+</ol>
 <p>With big data, you stop interacting with the data directly. Instead,
 you are interacting with the process.</p>
 <p>Our new science workflow now looks like this:</p>
 <div class="mermaid">
-<p>flowchart LR A[“Data”] workflow [“(Automated) Workflow” ]
-R[“Results”] A–&gt;workflow–&gt;R</p>
+<p>flowchart LR; A[“Data”]; workflow [“(Automated) Workflow”];
+R[“Results”]; A–&gt;workflow–&gt;R;</p>
 </div>
 <p>We have taken two steps forward in that we now have an automated and
 hopefully robust and reproducible workflow that we can rely on. However
@@ -557,45 +583,43 @@ techniques thanks to telescopes and simulations that produce data at
 scales and rates that fundamentally change how research is done. Some
 common big data patterns that have been adopted in astronomy are:</p>
 <ol style="list-style-type: decimal">
-<li>Streaming data (eg, time-domain astronomy)</li>
-</ol>
+<li>Streaming data (eg, time-domain astronomy)
 <ul>
 <li>Data arrives continuously.</li>
 <li>Decisions must be made in real time.</li>
 <li>You cannot store everything.</li>
 <li>You cannot inspect everything by hand.</li>
 </ul>
-<ol start="2" style="list-style-type: decimal">
-<li>Data that cannot be downloaded</li>
-</ol>
+</li>
+<li>Data that cannot be downloaded
 <ul>
 <li>Many datasets are simply too large to move.</li>
 <li>Analysis happens where the data lives.</li>
 <li>Attach an HPC to an archive, rather than the inverse.</li>
 </ul>
-<ol start="3" style="list-style-type: decimal">
-<li>Pipelines as the primary interface</li>
-</ol>
+</li>
+<li>Pipelines as the primary interface
 <ul>
 <li>The raw data is rarely used directly.</li>
 <li>Complex pipelines produce calibrated ‘science ready’ data
 products.</li>
 </ul>
-<ol start="4" style="list-style-type: decimal">
-<li>Long-lived datasets and data releases</li>
-</ol>
+</li>
+<li>Long-lived datasets and data releases
 <ul>
 <li>Results depend on which version of the data you used, and how it was
 processed.</li>
 <li>Data and software versioning becomes very important for
 reproducibility.</li>
 </ul>
+</li>
+</ol>
 <p>As a result we have a frequent data access pattern, where the user is
 far from the raw data and will often only retrieve a filtered subset of
 the processed data for their particular research need.</p>
 <div class="mermaid">
-<p>flowchart LR Observation –&gt; Pipeline –&gt; Archive –&gt; Platform
-–&gt; User Simulation –&gt; Pipeline</p>
+<p>flowchart LR; Observation –&gt; Pipeline –&gt; Archive –&gt; Platform
+–&gt; User; Simulation –&gt; Pipeline;</p>
 </div>
 </div>
 <div class="section level3">
@@ -608,10 +632,6 @@ already encountering the same underlying problems:</p>
 <li>re-running analyses late in your project</li>
 <li>scaling an approach that worked on a small sample</li>
 </ul>
-<div class="quote">
-<p>Big data often requires specialized hardware or software to store,
-transmit, process, and visualize.</p>
-</div>
 <p>When does your research transition from using data to big data?</p>
 <p>How does big data change the way we conduct research?</p>
 <!--
@@ -751,8 +771,8 @@ community.</li>
   "url": "https://ADACS-Australia.github.io/2026-HWSA-Workshops/instructor/aio.html",
   "identifier": "https://ADACS-Australia.github.io/2026-HWSA-Workshops/instructor/aio.html",
   "dateCreated": "2026-06-17",
-  "dateModified": "2026-06-18",
-  "datePublished": "2026-06-18"
+  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-22"
 }
 
   </script><script>
