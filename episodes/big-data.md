@@ -106,13 +106,30 @@ However we also have taken a step back in that we are now less directly working 
 
 
 ::: callout
+
 ## Big Data in the AT20G survey (ca 2010)
 
-The Australia Telescope 20GHz (AT20G) survey was an ambitious survey inspired by a new wide-band correlator that was installed at the Australia Telescope Compact Array.
+The Australia Telescope 20GHz ([AT20G]) survey was an ambitious survey inspired by a new wide-band correlator that was installed at the Australia Telescope Compact Array.
 The correlator is the piece of hardware that combines signals from different parts of a radio telescope, digitizes the product, and records it to disk.
 At the time the ATCA systems had a recording bandwidth of only 128MHz, while this new wideband correlator had a whopping 8GHz bandwidth.
-Since sensitivity is proportional to bandwidth, this represented a portential 32x (?) increase in sensitivity.
-This increased sensivitiy corresponds to a reduction in time required to survey an area of sky to a given flux density limit, and so this new correlator made it possible to conduct a survey of the southrn sky at 20GHz with weeks of observations rather than years.
+Since sensitivity is proportional to bandwidth times integration time, this represented a portential **64x decrease** in survey time for a fixed sensitivity goal.
+This new correlator made it possible to conduct a survey of the southrn sky at 20GHz with weeks of observations rather than years.
+
+The new correlator made many sacrificies to achieve the extremely large bandwidth, some of these include the lack of delay tracking, and an analogue signal mixer, meaning that the visibilities that were produced could not be processed using existing software.
+The analogue signal mixer meant that the 16 delay channels were not evenly spaced, so standard imaing techniques (fast fourier inversion) were not appropriate.
+Additionally, the lack of delay tracking meant that the telescope could only observe at fixed hour angles (angle from the meridian), requiring a new data collection techinuqe to be used to eventually cover the entire sky.
+
+Since the calibration and imaging techniques were new, (and the resulting images were not able to be CLEANed) follow-up observations were needed to confirm the reality, brightness, location, and morphology of all detected objects.
+The number of detected sources was small enough that these follow-up observations were conducted with traditional observing techniques and were done at 5GHz, 8GHz, and 20GHz.
+
+The total volume of data collected by the AT20G was not that different from other observations (? amount?), so why is this project being used as a case-study for a big data workshop?
+This is because we had to employ big data thinking to bring this project to completion:
+
+1. Lack of delay tracking meant that point and shoot style mapping had to be replaced with an on-the-fly mapping strategy. Furthermore, this meant that the normal calibration scheme couldn't be used and we had to develop new techniques for observing and using calibrator sources. The big data thinking here is a new approach to observing / calibration techniques.
+2. The wideband correlator collected visibilities, but with features that broke the assumptions of existing calibration and imaging software. Thus bespoke software was required to both calibrate the data, and create maps of the sky.
+3. The on-the-fly mapping technique was an already known technique used on other instruments, but the standard software for ATCA data processing didn't support this mode, requiring new software to be built.
+4. Whilst the 20GHz component of the survey was blind (no prior information), the 5/8GHz components were highly informed by the 20GHz results and thus not blind. This restricted the statistical tests that could be done using the population of sources at each of these frequencies, requiring careful communication and presentation of results.
+5. The final images that were created for the survey couldn't be analysed or interpreted in the same way as traditional images. Ultimate it was decided that releasing these images would cause more confusion than real science and so they were withheld. The plan was to create a web service that would allow people to extract meaningful information from these images using custom analysis techniques. (It never happened).
 
 :::
 
@@ -158,3 +175,5 @@ But you are likely already encountering the same underlying problems:
 - scaling an approach that worked on a small sample
 
 
+
+[AT20G]: https://ui.adsabs.harvard.edu/abs/2010MNRAS.402.2403M/abstract
