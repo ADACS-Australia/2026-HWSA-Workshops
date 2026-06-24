@@ -174,6 +174,53 @@ But you are likely already encountering the same underlying problems:
 - re-running analyses late in your project
 - scaling an approach that worked on a small sample
 
+::: challenge
+
+## Big data projects
+
+Each group has been given a selection of case studies drawn from Astronomy research past and present.
+
+**Part 1**: Choose one of the case studies and identify some difficulties faced or limiting factors for this project in relation to:
+
+* Collecting, storing or transporting data
+* Filtering, calibrating, or processing data
+* Visualising data
+* Communicating results
+ 
+**Part 2**: Discuss some of the tools that were used in or developed for this project. 
+
+**Part 3**: For completed projects, if you were to re-run this project again today, what would you do differently, what would be easier, and would you still consider the project a big data project?
+
+:::
+
+::: tab
+
+### GLEAM
+
+details
+
+### GRB followup (VLA / ATCA)
+
+details
+
+### FRB detector (ASKAP)
+
+details
+
+### Digitising sky plates
+
+details
+
+### 2DF / spectroscopic surveys
+
+details
+
+### Some simulation work
+
+details more
+
+:::
+
 
 
 [AT20G]: https://ui.adsabs.harvard.edu/abs/2010MNRAS.402.2403M/abstract
