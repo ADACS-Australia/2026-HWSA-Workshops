@@ -317,7 +317,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Big Data</h1>
-        <p>Last updated on 2026-06-22 |
+        <p>Last updated on 2026-06-24 |
 
         <a href="https://github.com/ADACS-Australia/2026-HWSA-Workshops/edit/main/episodes/big-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -476,20 +476,65 @@ with the data at each stage.</p>
 <div id="big-data-in-the-at20g-survey-ca-2010" class="callout-inner">
 <h3 class="callout-title">Big Data in the AT20G survey (ca 2010)</h3>
 <div class="callout-content">
-<p>The Australia Telescope 20GHz (AT20G) survey was an ambitious survey
-inspired by a new wide-band correlator that was installed at the
-Australia Telescope Compact Array. The correlator is the piece of
-hardware that combines signals from different parts of a radio
-telescope, digitizes the product, and records it to disk. At the time
-the ATCA systems had a recording bandwidth of only 128MHz, while this
-new wideband correlator had a whopping 8GHz bandwidth. Since sensitivity
-is proportional to bandwidth, this represented a portential 32x (?)
-increase in sensitivity. This increased sensivitiy corresponds to a
-reduction in time required to survey an area of sky to a given flux
-density limit, and so this new correlator made it possible to conduct a
-survey of the southrn sky at 20GHz with weeks of observations rather
-than years.</p>
-</div>
+<p>The Australia Telescope 20GHz (<a href="https://ui.adsabs.harvard.edu/abs/2010MNRAS.402.2403M/abstract" class="external-link">AT20G</a>)
+survey was an ambitious survey inspired by a new wide-band correlator
+that was installed at the Australia Telescope Compact Array. The
+correlator is the piece of hardware that combines signals from different
+parts of a radio telescope, digitizes the product, and records it to
+disk. At the time the ATCA systems had a recording bandwidth of only
+128MHz, while this new wideband correlator had a whopping 8GHz
+bandwidth. Since sensitivity is proportional to bandwidth times
+integration time, this represented a portential <strong>64x
+decrease</strong> in survey time for a fixed sensitivity goal. This new
+correlator made it possible to conduct a survey of the southrn sky at
+20GHz with weeks of observations rather than years.</p>
+<p>The new correlator made many sacrificies to achieve the extremely
+large bandwidth, some of these include the lack of delay tracking, and
+an analogue signal mixer, meaning that the visibilities that were
+produced could not be processed using existing software. The analogue
+signal mixer meant that the 16 delay channels were not evenly spaced, so
+standard imaing techniques (fast fourier inversion) were not
+appropriate. Additionally, the lack of delay tracking meant that the
+telescope could only observe at fixed hour angles (angle from the
+meridian), requiring a new data collection techinuqe to be used to
+eventually cover the entire sky.</p>
+<p>Since the calibration and imaging techniques were new, (and the
+resulting images were not able to be CLEANed) follow-up observations
+were needed to confirm the reality, brightness, location, and morphology
+of all detected objects. The number of detected sources was small enough
+that these follow-up observations were conducted with traditional
+observing techniques and were done at 5GHz, 8GHz, and 20GHz.</p>
+<p>The total volume of data collected by the AT20G was not that
+different from other observations (? amount?), so why is this project
+being used as a case-study for a big data workshop? This is because we
+had to employ big data thinking to bring this project to completion:</p>
+<ol style="list-style-type: decimal"><li>Lack of delay tracking meant that point and shoot style mapping had
+to be replaced with an on-the-fly mapping strategy. Furthermore, this
+meant that the normal calibration scheme couldn’t be used and we had to
+develop new techniques for observing and using calibrator sources. The
+big data thinking here is a new approach to observing / calibration
+techniques.</li>
+<li>The wideband correlator collected visibilities, but with features
+that broke the assumptions of existing calibration and imaging software.
+Thus bespoke software was required to both calibrate the data, and
+create maps of the sky.</li>
+<li>The on-the-fly mapping technique was an already known technique used
+on other instruments, but the standard software for ATCA data processing
+didn’t support this mode, requiring new software to be built.</li>
+<li>Whilst the 20GHz component of the survey was blind (no prior
+information), the 5/8GHz components were highly informed by the 20GHz
+results and thus not blind. This restricted the statistical tests that
+could be done using the population of sources at each of these
+frequencies, requiring careful communication and presentation of
+results.</li>
+<li>The final images that were created for the survey couldn’t be
+analysed or interpreted in the same way as traditional images. Ultimate
+it was decided that releasing these images would cause more confusion
+than real science and so they were withheld. The plan was to create a
+web service that would allow people to extract meaningful information
+from these images using custom analysis techniques. (It never
+happened).</li>
+</ol></div>
 </div>
 </div>
 </div>
@@ -537,10 +582,91 @@ already encountering the same underlying problems:</p>
 <ul><li>combining multiple datasets</li>
 <li>re-running analyses late in your project</li>
 <li>scaling an approach that worked on a small sample</li>
-</ul><!--
+</ul><div id="big-data-projects" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="big-data-projects" class="callout-inner">
+<h3 class="callout-title">Big data projects</h3>
+<div class="callout-content">
+<p>Each group has been given a selection of case studies drawn from
+Astronomy research past and present.</p>
+<p><strong>Part 1</strong>: Choose one of the case studies and identify
+some difficulties faced or limiting factors for this project in relation
+to:</p>
+<ul><li>Collecting, storing or transporting data</li>
+<li>Filtering, calibrating, or processing data</li>
+<li>Visualising data</li>
+<li>Communicating results</li>
+</ul><p><strong>Part 2</strong>: Discuss some of the tools that were used in
+or developed for this project.</p>
+<p><strong>Part 3</strong>: For completed projects, if you were to
+re-run this project again today, what would you do differently, what
+would be easier, and would you still consider the project a big data
+project?</p>
+</div>
+</div>
+</div>
+<div class="tabs">
+<nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-1-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-1" type="button" role="tab" aria-controls="nav-tabpanel-1-1" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-1-1">
+  GLEAM
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-1-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-2" type="button" role="tab" aria-controls="nav-tabpanel-1-2" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-1-2">
+  GRB followup (VLA / ATCA)
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-1-3" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-3" type="button" role="tab" aria-controls="nav-tabpanel-1-3" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-1-3">
+  FRB detector (ASKAP)
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-1-4" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-4" type="button" role="tab" aria-controls="nav-tabpanel-1-4" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-1-4">
+  Digitising sky plates
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-1-5" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-5" type="button" role="tab" aria-controls="nav-tabpanel-1-5" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-1-5">
+  2DF / spectroscopic surveys
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-1-6" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-6" type="button" role="tab" aria-controls="nav-tabpanel-1-6" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-1-6">
+  Some simulation work
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-1" class="tab-content">
+<div id="nav-tabpanel-1-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-1">
+<p>details</p>
+</div>
+<div id="nav-tabpanel-1-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-2">
+<p>details</p>
+</div>
+<div id="nav-tabpanel-1-3" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-3">
+<p>details</p>
+</div>
+<div id="nav-tabpanel-1-4" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-4">
+<p>details</p>
+</div>
+<div id="nav-tabpanel-1-5" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-5">
+<p>details</p>
+</div>
+<div id="nav-tabpanel-1-6" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-6">
+<p>details more</p>
+</div>
+</div>
+</div>
+<!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- --></div>
+ -->
+</div>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/introduction.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
@@ -604,8 +730,8 @@ any links that you are not going to use.
   "url": "https://ADACS-Australia.github.io/2026-HWSA-Workshops/instructor/big-data.html",
   "identifier": "https://ADACS-Australia.github.io/2026-HWSA-Workshops/instructor/big-data.html",
   "dateCreated": "2026-06-17",
-  "dateModified": "2026-06-22",
-  "datePublished": "2026-06-23"
+  "dateModified": "2026-06-24",
+  "datePublished": "2026-06-24"
 }
 
   </script><script>
