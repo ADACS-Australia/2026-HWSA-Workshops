@@ -232,12 +232,19 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         3. Workflows
         </span>
-      
+      </button>
     </div><!--/div.accordion-header-->
+
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
+      <div class="accordion-body">
+        <ul><li><a href="#workflows-for-computers">Workflows (for computers)</a></li>
+        </ul></div><!--/div.accordion-body-->
+    </div><!--/div.accordion-collapse-->
 
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -309,7 +316,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Workflows</h1>
-        <p>Last updated on 2026-06-17 |
+        <p>Last updated on 2026-06-24 |
 
         <a href="https://github.com/ADACS-Australia/2026-HWSA-Workshops/edit/main/episodes/workflows.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -348,14 +355,211 @@ context.</li>
 </div>
 </div>
 </div>
-<!--
+<p>In the previous section we saw an example of a workflow. Essentially
+it was just a flow chart that describes how we do a research project.
+The example was very generic and high level. A more <em>useful</em>
+workflow is one that gives explicit instructions and has required
+inputs, tools, methodologies, and defines outputs. A good workflow
+should be like a recipe:</p>
+<p>![A workflow for humans][fig/Recipe.png]</p>
+<p>Why are we focusing on workflows? Because they help us to:</p>
+<ol style="list-style-type: decimal"><li>Indentify inputs and dependencies,</li>
+<li>Describe / record our methodology,</li>
+<li>Design and improve our research methodology,</li>
+<li>Explore alternative hypotheses (using version control),</li>
+<li>Rerun our experiment in part or in whole to build trust in the
+process,</li>
+<li>Adapt our experiment to work on new inputs, or produce different
+outputs.</li>
+</ol><p>The more detailed our workflow description is, the easier it is to do
+each of the above. Designing a workflow is an iterative process: start
+at the highest level and then delve deeper as you go. Start with what
+you know, explore and test new ideas, and then incorporate them once
+validated.</p>
+<div id="workflows-for-humans" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="workflows-for-humans" class="callout-inner">
+<h3 class="callout-title">Workflows (for humans)</h3>
+<div class="callout-content">
+<p>Returning to the recipe analogy we are going to design a workflow for
+making breakfast. The requirements are: - The breakfast must be enough
+for 2 people, - Each person will have bacon, scrambled eggs, toast,
+beans, and coffee, - A signle person will be preparing the meal in a
+home kitchen.</p>
+<p>In your groups, write a workflow that a person can follow.</p>
+<p>Consider the following questions when designing your workflow: - Is
+order important? - Which tasks depend on each other, and which can be
+done in parallel? - What tools and techniques are required?</p>
+<p>When complete, write your final workflow on an A4 paper.</p>
+</div>
+</div>
+</div>
+<div id="big-data-breakfast-thinking" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="big-data-breakfast-thinking" class="callout-inner">
+<h3 class="callout-title">big <sub>data</sub> breakfast thinking</h3>
+<div class="callout-content">
+<p>Consider the workflow that you created in the previous challenge. How
+would you change the workflow if one of the following changes were
+needed:</p>
+<ol style="list-style-type: decimal"><li>The breakfast needed to be prepared in the minimum possible
+time.</li>
+<li>You needed to prepare breakfast for 100 people instead of just
+2.</li>
+<li>You need to accommodate different preferences for
+egg/toast/coffee.</li>
+</ol><p>Consider changes to inputs, outputs, tools, techniques, and
+personell.</p>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="workflows-for-computers">Workflows (for computers)<a class="anchor" aria-label="anchor" href="#workflows-for-computers"></a></h2>
+<hr class="half-width"><p>A workflow for a computer is just a script that you write that
+details all of the same ideas, but you are working with data as inputs,
+software as tools, and hardware instead of people. Ultimately what we
+are talking about is writing a bunch of code that embodies all the work
+that is being done in the workflow. This can be done in nearly any
+language that you choose, and there are even bespoke languages and tools
+designed for workflow management and orchestration.</p>
+<p>Many people think that writing a workflow for a computer is hard and
+avoid it. Some common avoidant reasons are:</p>
+<ul><li>“My project isn’t beig or complex enough”</li>
+<li>“Creating a workflow would take longer than just doing it
+manually”</li>
+<li>“I’m only ever going to run this once anyway”</li>
+<li>“I already use a bunch of different scripts to automate my
+work”</li>
+<li>“I don’t have time to learn new tools”</li>
+<li>“Research is organic, I need flexibility in how I work”</li>
+<li>“I’ll write this all up as a proper workflow after my Thesis is
+complete”</li>
+</ul><div id="discussion3" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<p>No doubt you have thought or heard some of these reasons before. What
+other reasons do you have for not using / making a workflow?</p>
+<p>Use <a href="https://wooclap.com" class="external-link">Wooclap</a> to share your
+answers.</p>
+</div>
+</div>
+</div>
+<p>One of the main reasons that people avoid creating workflows is
+because the cost is immediate, but the benefits are delayed. Early in
+your project the workflow seems like an overhead that is stifling your
+progress so it’s easy to abandon. However, if you embrace a workflow
+mindset there is a clear path to success that balances early investment
+with long term payoff.</p>
+<div class="section level3">
+<h3 id="the-workflow-mindeset">The workflow mindeset<a class="anchor" aria-label="anchor" href="#the-workflow-mindeset"></a></h3>
+<p>Start any project by recognising that you will <em>eventually</em>
+need to redo everything at least once, but probably many times. The most
+embarassing and confidence destroying thing you can do is rerun your
+result and get different answers! <strong>A workflow makes the
+redo/retry process more robust</strong>.</p>
+<p>For confidence in your work, you should be able to defend every
+decision made, and you should also be able to track where and when these
+decisions are made. <strong>A workflow becomes an (almost)
+self-documenting record of your methodology</strong>.</p>
+<p>The most valuable resources you have is your <em>time</em>. Once you
+have figured out how a part of your research should be done, writing a
+script to automate it will save you time. <strong>A workflow is the
+ultimate automation and as such will save you time</strong>.</p>
+<p>Reserach is inherently cumulative in nature. Your future projects
+will most likely build upon your past projects. <strong>A (modular)
+workflow can be modified for different inputs, outputs, or
+methods</strong>. This will make your subsequent projects faster to
+start, again saving you time.</p>
+<p>With all the above in mind here are some recommendations to how you
+should approach your research workflow development:</p>
+<ol style="list-style-type: decimal"><li>Start small with simple tools.</li>
+<li>Build a modular workflow using whatever tools make sense for each
+task.</li>
+<li>Prioritise languages/tools that have good community or peer
+support.</li>
+<li>Increase complexity only when you outgrow your current system.</li>
+</ol><p>In a practical sense this would look like:</p>
+<ul><li>Download data manually, do some exploration by hand, and produce a
+filtered data set that you will use. Recod what you have done in your
+lab notebook.</li>
+<li>Identify tools that will allow you to do the same work that can be
+used from the command line, and copy all these commands into a text
+file. Add comments to describe what is being done and why.</li>
+<li>Convert this text file of commands into a bash script. Often this
+just means changing the filename / permissions, and adding a
+<code>#!</code> line to the file.</li>
+<li>Bonus: make the input/output filenames arguments or at least
+variables that are defined once and used multiple times, so that you can
+change these easily in the future.</li>
+<li>Move to the analysis stage, again starting with the manual process,
+then moving to a command line / automated version, and then capturing
+this in a script.</li>
+<li>Once you have a few independent scripts, you can build a workflow.
+This workflow can be as simple as just calling each of the other scripts
+in order.</li>
+<li>If/When you find yourself needing to change parameters/options
+within the scripts, consider turning the scripts into more general use
+tools or modules.</li>
+</ul></div>
+<div class="section level3">
+<h3 id="workflow-managers">Workflow managers<a class="anchor" aria-label="anchor" href="#workflow-managers"></a></h3>
+<p>Some useful features of a workflow manager include:</p>
+<ul><li>Building of dependency between tasks to determine execution
+order</li>
+<li>Caching results so that re-running only executes tasks that have
+changed inputs</li>
+<li>Logging of actions planned, completed, and failed</li>
+<li>Isolating tasks to separate folders or environments to avoid
+interference between tasks</li>
+<li>Parallel execution of non-dependent tasks</li>
+<li>The ability to work across multiple hardware architectures</li>
+<li>Use of containersised tasks for easier dependency management and
+workflow portability</li>
+</ul><p>In increasing order of complexity and overheads, but also flexibility
+and control, we have the following options for designing and managing a
+workflow.</p>
+<pre class="mermaid"><code>flowchart LR
+    Bash --&gt; Make --&gt; Snakemake --&gt; Nextflow</code></pre>
+<ul><li>
+<strong>Bash</strong>: Simply list all the commands to execute and
+it’s done. No bonus features, literally everything has to be
+written/managed by you.</li>
+<li>
+<strong>Make</strong>: Designed for workflows that have files as
+input/ouputs (eg compiling code). User defines ruls that map an input to
+an oput, and Make will decide what needs to be done to reach a
+particular target output result. Caching, parallelism, and dependency
+tracking is built in. Syntax is clearly defined but easily forgotten
+creating a <em>write only</em> language situation.</li>
+<li>
+<strong>Snakemake</strong>: Essentially Make but with a much nicer
+syntax. Easier to configure/limit parallelism, tasks can be generalised
+more easily. Can create a directed acyclic graph (DAG, a nice workflow
+graph) that shows the execution plan. Has the ability to do a “dry-run”
+that will show the commands that would be executed without actually
+running them.</li>
+<li>
+<strong>Nextflow</strong>: A syntax that is similar to Snakemake but
+which is designed to be easily deployed across various HPC systems.
+Includes easily configurable use of containerisation, integration with
+jos schedulers like SLURM, and has a good separation of tasks via
+working folders. Can pass values between tasks as well as files. The
+all-singing all-dancing workflow manager.</li>
+</ul><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- -->
-
-
-
-      </div> <!-- / div.lesson-content -->
+ --></div>
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="big-data.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="reproducible-research.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -418,7 +622,7 @@ any links that you are not going to use.
   "url": "https://ADACS-Australia.github.io/2026-HWSA-Workshops/workflows.html",
   "identifier": "https://ADACS-Australia.github.io/2026-HWSA-Workshops/workflows.html",
   "dateCreated": "2026-06-17",
-  "dateModified": "2026-06-17",
+  "dateModified": "2026-06-24",
   "datePublished": "2026-06-24"
 }
 
