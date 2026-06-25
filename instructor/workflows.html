@@ -316,7 +316,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Workflows</h1>
-        <p>Last updated on 2026-06-24 |
+        <p>Last updated on 2026-06-25 |
 
         <a href="https://github.com/ADACS-Australia/2026-HWSA-Workshops/edit/main/episodes/workflows.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -363,8 +363,8 @@ The example was very generic and high level. A more <em>useful</em>
 workflow is one that gives explicit instructions and has required
 inputs, tools, methodologies, and defines outputs. A good workflow
 should be like a recipe:</p>
-<p>![A workflow for humans][fig/Recipe.png]</p>
-<p>Why are we focusing on workflows? Because they help us to:</p>
+<figure><img src="../fig/Recipe.png" alt="A workflow for humans" class="figure mx-auto d-block"><div class="figcaption">A workflow for humans</div>
+</figure><p>Why are we focusing on workflows? Because they help us to:</p>
 <ol style="list-style-type: decimal"><li>Indentify inputs and dependencies,</li>
 <li>Describe / record our methodology,</li>
 <li>Design and improve our research methodology,</li>
@@ -395,18 +395,34 @@ home kitchen.</p>
 <p>Consider the following questions when designing your workflow: - Is
 order important? - Which tasks depend on each other, and which can be
 done in parallel? - What tools and techniques are required?</p>
-<p>When complete, write your final workflow on an A4 paper.</p>
+<p>When complete, write your final workflow on an A4 paper, photograph,
+and upload your answer to the shared <a href="https://docs.google.com/document/d/1NYZqewnqmAe6zqpz0GgZtAoNvcnOdnZWOiG0ZQERgUc/edit?usp=sharing?tab=t.0" class="external-link">GoogleDoc</a>.</p>
+<p>You may find the following iconography useful:</p>
+<pre class="mermaid"><code>flowchart TD
+    start([Start]) --&gt; in1[/Input/]
+    start--&gt;in2@{ shape: manual-input, label: "Manual Input"}
+    in1--&gt;proc[Process] --&gt;man[/Manual Process\]
+    in2--&gt; sub[[Sub Process]] --&gt; man --&gt; c{Decision}
+    out[/output/]
+    c --&gt;|No| man
+    c --&gt;|Yes| out
+    out --&gt; e([End])
+</code></pre>
 </div>
 </div>
 </div>
-<div id="big-data-breakfast-thinking" class="callout discussion">
+<div id="discussion2" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <span class="callout-header">Discussion</span>
-<div id="big-data-breakfast-thinking" class="callout-inner">
-<h3 class="callout-title">big <sub>data</sub> breakfast thinking</h3>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
 <div class="callout-content">
+##
+<p>
+Big <del>data</del> breakfast thinking
+</p>
 <p>Consider the workflow that you created in the previous challenge. How
 would you change the workflow if one of the following changes were
 needed:</p>
@@ -533,30 +549,24 @@ workflow.</p>
 <pre class="mermaid"><code>flowchart LR
     Bash --&gt; Make --&gt; Snakemake --&gt; Nextflow</code></pre>
 <ul><li>
-<strong>Bash</strong>: Simply list all the commands to execute and
-it’s done. No bonus features, literally everything has to be
-written/managed by you.</li>
+</li>
 <li>
-<strong>Make</strong>: Designed for workflows that have files as
-input/ouputs (eg compiling code). User defines ruls that map an input to
-an oput, and Make will decide what needs to be done to reach a
-particular target output result. Caching, parallelism, and dependency
-tracking is built in. Syntax is clearly defined but easily forgotten
-creating a <em>write only</em> language situation.</li>
+<a href="https://devdocs.io/gnu_make/" class="external-link">Make</a>: Designed for
+workflows that have files as input/ouputs (eg compiling code). User
+defines ruls that map an input to an oput, and Make will decide what
+needs to be done to reach a particular target output result. Caching,
+parallelism, and dependency tracking is built in. Syntax is clearly
+defined but easily forgotten creating a <em>write only</em> language
+situation.</li>
 <li>
-<strong>Snakemake</strong>: Essentially Make but with a much nicer
-syntax. Easier to configure/limit parallelism, tasks can be generalised
-more easily. Can create a directed acyclic graph (DAG, a nice workflow
-graph) that shows the execution plan. Has the ability to do a “dry-run”
-that will show the commands that would be executed without actually
-running them.</li>
+<a href="https://snakemake.readthedocs.io/en/stable/index.html" class="external-link">Snakemake</a>:
+Essentially Make but with a much nicer syntax. Easier to configure/limit
+parallelism, tasks can be generalised more easily. Can create a directed
+acyclic graph (DAG, a nice workflow graph) that shows the execution
+plan. Has the ability to do a “dry-run” that will show the commands that
+would be executed without actually running them.</li>
 <li>
-<strong>Nextflow</strong>: A syntax that is similar to Snakemake but
-which is designed to be easily deployed across various HPC systems.
-Includes easily configurable use of containerisation, integration with
-jos schedulers like SLURM, and has a good separation of tasks via
-working folders. Can pass values between tasks as well as files. The
-all-singing all-dancing workflow manager.</li>
+</li>
 </ul><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
@@ -624,8 +634,8 @@ any links that you are not going to use.
   "url": "https://ADACS-Australia.github.io/2026-HWSA-Workshops/instructor/workflows.html",
   "identifier": "https://ADACS-Australia.github.io/2026-HWSA-Workshops/instructor/workflows.html",
   "dateCreated": "2026-06-17",
-  "dateModified": "2026-06-24",
-  "datePublished": "2026-06-24"
+  "dateModified": "2026-06-25",
+  "datePublished": "2026-06-25"
 }
 
   </script><script>
