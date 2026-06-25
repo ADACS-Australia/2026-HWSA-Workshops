@@ -223,7 +223,7 @@ jobs:
         shell: bash
 
       - name: "Upload cache result"
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: apply-cache-result
           path: ${{ github.workspace }}/apply-cache-result
