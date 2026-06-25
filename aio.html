@@ -430,7 +430,8 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
 </li>
-</ol></section></section><section id="aio-big-data"><p>Content from <a href="big-data.html">Big Data</a></p>
+</ol>
+<!-- [Bash]: https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html --><!-- [Nextflow]: https://docs.seqera.io/nextflow/ --></section></section><section id="aio-big-data"><p>Content from <a href="big-data.html">Big Data</a></p>
 <hr>
 <p>Last updated on 2026-06-25 |
 
@@ -590,7 +591,7 @@ you are interacting with the process.</p>
 <pre class="mermaid"><code>
 flowchart LR;
     accTitle: {Our new science workflow.}
-    addDescr: {An alternative science workflow consisting of data input, a fully automated workflow which out puts our results.}
+    accDescr: {An alternative science workflow consisting of data input, a fully automated workflow which out puts our results.}
     A["Data"];
     workflow["(Automated) Workflow"];
     R["Results"];
@@ -820,6 +821,8 @@ your answers.</p>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
+<!-- [Bash]: https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html -->
+<!-- [Nextflow]: https://docs.seqera.io/nextflow/ -->
 </div>
 </section></section><section id="aio-workflows"><p>Content from <a href="workflows.html">Workflows</a></p>
 <hr>
@@ -903,17 +906,18 @@ done in parallel? - What tools and techniques are required?</p>
 <p>When complete, write your final workflow on an A4 paper, photograph,
 and upload your answer to the shared <a href="https://docs.google.com/document/d/1NYZqewnqmAe6zqpz0GgZtAoNvcnOdnZWOiG0ZQERgUc/edit?usp=sharing?tab=t.0" class="external-link">GoogleDoc</a>.</p>
 <p>You may find the following iconography useful:</p>
-<pre class="mermaid"><code>flowchart TD
-    accTitle: {Some potentially useful iconography.}
-    accDescr: {Flow chart that demonstrats some iconography that can help standardise representations and hopefully lead to increased understanding.}
-    start([Start]) --&gt; in1[/Input/]
-    start--&gt;in2@{ shape: manual-input, label: "Manual Input"}
-    in1--&gt;proc[Process] --&gt;man[/Manual Process\]
-    in2--&gt; sub[[Sub Process]] --&gt; man --&gt; c{Decision}
-    out[/output/]
-    c --&gt;|No| man
-    c --&gt;|Yes| out
-    out --&gt; e([End])
+<pre class="mermaid"><code>
+flowchart TD;
+    accTitle: {Some potentially useful iconography.};
+    accDescr: {Flow chart that demonstrats some iconography that can help standardise representations and hopefully lead to increased understanding.};
+    start([Start]) --&gt; in1[/Input/];
+    start--&gt;in2@{ shape: manual-input, label: "Manual Input"};
+    in1--&gt;proc[Process] --&gt;man[/Manual Process\];
+    in2--&gt; sub[[Sub Process]] --&gt; man --&gt; c{Decision};
+    out[/output/];
+    c --&gt;|No| man;
+    c --&gt;|Yes| out;
+    out --&gt; e([End]);
 </code></pre>
 </div>
 </div>
@@ -1068,12 +1072,14 @@ workflow portability</li>
 and control, we have the following options for designing and managing a
 workflow.</p>
 <pre class="mermaid"><code>flowchart LR
+    accTitle: {}
     Bash --&gt; Make --&gt; Snakemake --&gt; Nextflow</code></pre>
 <ul>
+<li>[Bash] : Simply list all the commands to execute and it’s done. No
+bonus features, literally everything has to be written/managed by
+you.</li>
 <li>
-</li>
-<li>
-<a href="https://devdocs.io/gnu_make/" class="external-link">Make</a>: Designed for
+<a href="https://devdocs.io/gnu_make/" class="external-link">Make</a> : Designed for
 workflows that have files as input/ouputs (eg compiling code). User
 defines ruls that map an input to an oput, and Make will decide what
 needs to be done to reach a particular target output result. Caching,
@@ -1081,19 +1087,23 @@ parallelism, and dependency tracking is built in. Syntax is clearly
 defined but easily forgotten creating a <em>write only</em> language
 situation.</li>
 <li>
-<a href="https://snakemake.readthedocs.io/en/stable/index.html" class="external-link">Snakemake</a>:
-Essentially Make but with a much nicer syntax. Easier to configure/limit
-parallelism, tasks can be generalised more easily. Can create a directed
-acyclic graph (DAG, a nice workflow graph) that shows the execution
-plan. Has the ability to do a “dry-run” that will show the commands that
-would be executed without actually running them.</li>
-<li>
-</li>
+<a href="https://snakemake.readthedocs.io/en/stable/index.html" class="external-link">Snakemake</a>
+: Essentially Make but with a much nicer syntax. Easier to
+configure/limit parallelism, tasks can be generalised more easily. Can
+create a directed acyclic graph (DAG, a nice workflow graph) that shows
+the execution plan. Has the ability to do a “dry-run” that will show the
+commands that would be executed without actually running them.</li>
+<li>[Nextflow] : A syntax that is similar to Snakemake but which is
+designed to be easily deployed across various HPC systems. Includes
+easily configurable use of containerisation, integration with jos
+schedulers like SLURM, and has a good separation of tasks via working
+folders. Can pass values between tasks as well as files. The all-singing
+all-dancing workflow manager.</li>
 </ul>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- -->
+ --><!-- [Bash]: https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html --><!-- [Nextflow]: https://docs.seqera.io/nextflow/ -->
 </div>
 </section></section><section id="aio-reproducible-research"><p>Content from <a href="reproducible-research.html">Reproducible Research</a></p>
 <hr>
