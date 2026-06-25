@@ -65,17 +65,18 @@ You may find the following iconography useful:
 
 
 ```mermaid
-flowchart TD    
-    accTitle: {Some potentially useful iconography.}
-    accDescr: {Flow chart that demonstrats some iconography that can help standardise representations and hopefully lead to increased understanding.}
-    start([Start]) --> in1[/Input/]
-    start-->in2@{ shape: manual-input, label: "Manual Input"}
-    in1-->proc[Process] -->man[/Manual Process\]
-    in2--> sub[[Sub Process]] --> man --> c{Decision}
-    out[/output/]
-    c -->|No| man
-    c -->|Yes| out
-    out --> e([End])
+
+flowchart TD;
+    accTitle: {Some potentially useful iconography.};
+    accDescr: {Flow chart that demonstrats some iconography that can help standardise representations and hopefully lead to increased understanding.};
+    start([Start]) --> in1[/Input/];
+    start-->in2@{ shape: manual-input, label: "Manual Input"};
+    in1-->proc[Process] -->man[/Manual Process\];
+    in2--> sub[[Sub Process]] --> man --> c{Decision};
+    out[/output/];
+    c -->|No| man;
+    c -->|Yes| out;
+    out --> e([End]);
 
 ```
 
@@ -183,10 +184,11 @@ In increasing order of complexity and overheads, but also flexibility and contro
 
 ```mermaid
 flowchart LR
+    accTitle: {}
     Bash --> Make --> Snakemake --> Nextflow
 ```
 
-* [Bash]: Simply list all the commands to execute and it's done. No bonus features, literally everything has to be written/managed by you.
-* [Make]: Designed for workflows that have files as input/ouputs (eg compiling code). User defines ruls that map an input to an oput, and Make will decide what needs to be done to reach a particular target output result. Caching, parallelism, and dependency tracking is built in. Syntax is clearly defined but easily forgotten creating a *write only* language situation.
-* [Snakemake]: Essentially Make but with a much nicer syntax. Easier to configure/limit parallelism, tasks can be generalised more easily. Can create a directed acyclic graph (DAG, a nice workflow graph) that shows the execution plan. Has the ability to do a "dry-run" that will show the commands that would be executed without actually running them.
-* [Nextflow]: A syntax that is similar to Snakemake but which is designed to be easily deployed across various HPC systems. Includes easily configurable use of containerisation, integration with jos schedulers like SLURM, and has a good separation of tasks via working folders. Can pass values between tasks as well as files. The all-singing all-dancing workflow manager.
+* [Bash] : Simply list all the commands to execute and it's done. No bonus features, literally everything has to be written/managed by you.
+* [Make] : Designed for workflows that have files as input/ouputs (eg compiling code). User defines ruls that map an input to an oput, and Make will decide what needs to be done to reach a particular target output result. Caching, parallelism, and dependency tracking is built in. Syntax is clearly defined but easily forgotten creating a *write only* language situation.
+* [Snakemake] : Essentially Make but with a much nicer syntax. Easier to configure/limit parallelism, tasks can be generalised more easily. Can create a directed acyclic graph (DAG, a nice workflow graph) that shows the execution plan. Has the ability to do a "dry-run" that will show the commands that would be executed without actually running them.
+* [Nextflow] : A syntax that is similar to Snakemake but which is designed to be easily deployed across various HPC systems. Includes easily configurable use of containerisation, integration with jos schedulers like SLURM, and has a good separation of tasks via working folders. Can pass values between tasks as well as files. The all-singing all-dancing workflow manager.

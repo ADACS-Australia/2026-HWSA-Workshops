@@ -96,7 +96,7 @@ Our new science workflow now looks like this:
 
 flowchart LR;
     accTitle: {Our new science workflow.}
-    addDescr: {An alternative science workflow consisting of data input, a fully automated workflow which out puts our results.}
+    accDescr: {An alternative science workflow consisting of data input, a fully automated workflow which out puts our results.}
     A["Data"];
     workflow["(Automated) Workflow"];
     R["Results"];
