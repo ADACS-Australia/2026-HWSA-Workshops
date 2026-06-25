@@ -84,7 +84,7 @@ flowchart TD
 
 ::: challenge
 
-<h2>Big <del>data</del> breakfast thinking</h2>
+<h3>Big <del>data</del> breakfast thinking</h3>
 
 Consider the workflow that you created in the previous challenge.
 How would you change the workflow if one of the following changes were needed:

@@ -95,6 +95,8 @@ Our new science workflow now looks like this:
 ```mermaid
 
 flowchart LR;
+    accTitle: {Our new science workflow.}
+    addDescr: {An alternative science workflow consisting of data input, a fully automated workflow which out puts our results.}
     A["Data"];
     workflow["(Automated) Workflow"];
     R["Results"];
@@ -161,6 +163,8 @@ As a result we have a frequent data access pattern, where the user is far from t
 ```mermaid
 
 flowchart LR;
+    accTitle: {The increased distance between raw data and user accessible data.}
+    accDescr: {Users no longer have access to the most raw data products, but instead rely on a pre-processing system and online archive to access data.}
     Observation --> Pipeline --> Archive --> Platform --> User;
     Simulation --> Pipeline;
 ```
@@ -190,6 +194,8 @@ Each group has been given a selection of case studies drawn from Astronomy resea
 **Part 2**: Discuss some of the tools that were used in or developed for this project. 
 
 **Part 3**: For completed projects, if you were to re-run this project again today, what would you do differently, what would be easier, and would you still consider the project a big data project?
+
+Join the shared [GoogleDoc], locate the tab relevant to the case study you have worked on and record your answers.
 
 :::
 
