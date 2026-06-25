@@ -26,7 +26,7 @@ The example was very generic and high level.
 A more *useful* workflow is one that gives explicit instructions and has required inputs, tools, methodologies, and defines outputs.
 A good workflow should be like a recipe:
 
-![A workflow for humans][fig/Recipe.png]
+![A workflow for humans](fig/Recipe.png)
 
 Why are we focusing on workflows?
 Because they help us to:
@@ -59,14 +59,30 @@ Consider the following questions when designing your workflow:
 - Which tasks depend on each other, and which can be done in parallel?
 - What tools and techniques are required?
 
-When complete, write your final workflow on an A4 paper.
+When complete, write your final workflow on an A4 paper, photograph, and upload your answer to the shared [GoogleDoc].
+
+You may find the following iconography useful:
+
+
+```mermaid
+flowchart TD
+    start([Start]) --> in1[/Input/]
+    start-->in2@{ shape: manual-input, label: "Manual Input"}
+    in1-->proc[Process] -->man[/Manual Process\]
+    in2--> sub[[Sub Process]] --> man --> c{Decision}
+    out[/output/]
+    c -->|No| man
+    c -->|Yes| out
+    out --> e([End])
+
+```
 
 ::: 
 
 
 ::: challenge
 
-## big ~data~ breakfast thinking
+## <p>Big <del>data</del> breakfast thinking</p>
 
 Consider the workflow that you created in the previous challenge.
 How would you change the workflow if one of the following changes were needed:
@@ -166,7 +182,7 @@ flowchart LR
     Bash --> Make --> Snakemake --> Nextflow
 ```
 
-* **Bash**: Simply list all the commands to execute and it's done. No bonus features, literally everything has to be written/managed by you.
-* **Make**: Designed for workflows that have files as input/ouputs (eg compiling code). User defines ruls that map an input to an oput, and Make will decide what needs to be done to reach a particular target output result. Caching, parallelism, and dependency tracking is built in. Syntax is clearly defined but easily forgotten creating a *write only* language situation.
-* **Snakemake**: Essentially Make but with a much nicer syntax. Easier to configure/limit parallelism, tasks can be generalised more easily. Can create a directed acyclic graph (DAG, a nice workflow graph) that shows the execution plan. Has the ability to do a "dry-run" that will show the commands that would be executed without actually running them.
-* **Nextflow**: A syntax that is similar to Snakemake but which is designed to be easily deployed across various HPC systems. Includes easily configurable use of containerisation, integration with jos schedulers like SLURM, and has a good separation of tasks via working folders. Can pass values between tasks as well as files. The all-singing all-dancing workflow manager.
+* [Bash]: Simply list all the commands to execute and it's done. No bonus features, literally everything has to be written/managed by you.
+* [Make]: Designed for workflows that have files as input/ouputs (eg compiling code). User defines ruls that map an input to an oput, and Make will decide what needs to be done to reach a particular target output result. Caching, parallelism, and dependency tracking is built in. Syntax is clearly defined but easily forgotten creating a *write only* language situation.
+* [Snakemake]: Essentially Make but with a much nicer syntax. Easier to configure/limit parallelism, tasks can be generalised more easily. Can create a directed acyclic graph (DAG, a nice workflow graph) that shows the execution plan. Has the ability to do a "dry-run" that will show the commands that would be executed without actually running them.
+* [Nextflow]: A syntax that is similar to Snakemake but which is designed to be easily deployed across various HPC systems. Includes easily configurable use of containerisation, integration with jos schedulers like SLURM, and has a good separation of tasks via working folders. Can pass values between tasks as well as files. The all-singing all-dancing workflow manager.
