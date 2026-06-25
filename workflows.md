@@ -26,7 +26,7 @@ The example was very generic and high level.
 A more *useful* workflow is one that gives explicit instructions and has required inputs, tools, methodologies, and defines outputs.
 A good workflow should be like a recipe:
 
-![A workflow for humans](fig/Recipe.png)
+![A workflow for humans](fig/Recipe.png){alt="A recipe for humans to nourish the body and soul."}
 
 Why are we focusing on workflows?
 Because they help us to:
@@ -192,3 +192,9 @@ flowchart LR
 * [Make] : Designed for workflows that have files as input/ouputs (eg compiling code). User defines ruls that map an input to an oput, and Make will decide what needs to be done to reach a particular target output result. Caching, parallelism, and dependency tracking is built in. Syntax is clearly defined but easily forgotten creating a *write only* language situation.
 * [Snakemake] : Essentially Make but with a much nicer syntax. Easier to configure/limit parallelism, tasks can be generalised more easily. Can create a directed acyclic graph (DAG, a nice workflow graph) that shows the execution plan. Has the ability to do a "dry-run" that will show the commands that would be executed without actually running them.
 * [Nextflow] : A syntax that is similar to Snakemake but which is designed to be easily deployed across various HPC systems. Includes easily configurable use of containerisation, integration with jos schedulers like SLURM, and has a good separation of tasks via working folders. Can pass values between tasks as well as files. The all-singing all-dancing workflow manager.
+
+
+[Bash]: https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html
+[Make]: https://devdocs.io/gnu_make/
+[SnakeMake]: https://snakemake.readthedocs.io/en/stable/index.html
+[Nextflow]: https://docs.seqera.io/nextflow/
