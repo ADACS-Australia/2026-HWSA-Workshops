@@ -65,7 +65,9 @@ You may find the following iconography useful:
 
 
 ```mermaid
-flowchart TD
+flowchart TD    
+    accTitle: {Some potentially useful iconography.}
+    accDescr: {Flow chart that demonstrats some iconography that can help standardise representations and hopefully lead to increased understanding.}
     start([Start]) --> in1[/Input/]
     start-->in2@{ shape: manual-input, label: "Manual Input"}
     in1-->proc[Process] -->man[/Manual Process\]
@@ -82,7 +84,7 @@ flowchart TD
 
 ::: challenge
 
-## <p>Big <del>data</del> breakfast thinking</p>
+<h2>Big <del>data</del> breakfast thinking</h2>
 
 Consider the workflow that you created in the previous challenge.
 How would you change the workflow if one of the following changes were needed:
@@ -114,6 +116,8 @@ Some common avoidant reasons are:
 
 ::: challenge
 
+## Other totally valid reasons to procrastinate
+
 No doubt you have thought or heard some of these reasons before.
 What other reasons do you have for not using / making a workflow?
 
@@ -126,10 +130,10 @@ One of the main reasons that people avoid creating workflows is because the cost
 Early in your project the workflow seems like an overhead that is stifling your progress so it's easy to abandon.
 However, if you embrace a workflow mindset there is a clear path to success that balances early investment with long term payoff.
 
-### The workflow mindeset
+### Adopting a workflow mindeset
 
 Start any project by recognising that you will *eventually* need to redo everything at least once, but probably many times.
-The most embarassing and confidence destroying thing you can do is rerun your result and get different answers!
+The most embarassing and confidence destroying thing you can make is rerun your result and get different answers!
 **A workflow makes the redo/retry process more robust**.
 
 For confidence in your work, you should be able to defend every decision made, and you should also be able to track where and when these decisions are made.
