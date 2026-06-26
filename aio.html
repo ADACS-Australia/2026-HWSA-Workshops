@@ -362,7 +362,7 @@
         
 <section id="aio-introduction"><p>Content from <a href="introduction.html">Introduction</a></p>
 <hr>
-<p>Last updated on 2026-06-22 |
+<p>Last updated on 2026-06-26 |
 
         <a href="https://github.com/ADACS-Australia/2026-HWSA-Workshops/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -374,15 +374,30 @@
 <p>At this HWSA workshop, <a href="https://adacs.org.au" class="external-link">ADACS</a> will
 be delivering two sessions:</p>
 <ul>
-<li>“Big data handling for reproducible workflows” (Sections 1-3) will
+<li>“Big data handling for reproducible workflows” (Sections 2-4) will
 be delivered in the first session Friday Afternoon from 1:30-3:30.</li>
-<li>“Workflows and reproducibility in practice” (Sections 4-5) will be
+<li>“Workflows and reproducibility in practice” (Section 5) will be
 delivered on Saturday morning from 11:30-12:30.</li>
 </ul>
 <p>Throughout these sessions we will be working in small groups of 3-5
 people. Within your groups you’ll often be asked to discuss a topic,
-summarize your answers, and then use <a href="https://wooclap.com" class="external-link">Wooclap</a> to share your answers with the
-class.</p>
+summarize your answers, and then use <a href="https://wooclap.com" class="external-link">Wooclap</a> or a shared <a href="https://docs.google.com/document/d/1NYZqewnqmAe6zqpz0GgZtAoNvcnOdnZWOiG0ZQERgUc/edit?usp=sharing?tab=t.0" class="external-link">GoogleDoc</a>
+to share your answers with the class.</p>
+<div id="discussion1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<p>Form into groups of around 4 people, making sure that you have at
+least one person in your group that you haven’t worked with before.</p>
+<p>Once you have formed a group, everyone should give a 15 second intro
+to the group.</p>
+</div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="background">Background<a class="anchor" aria-label="anchor" href="#background"></a>
 </h2>
 <hr class="half-width">
@@ -444,7 +459,7 @@ any links that you are not going to use.
 </li>
 </ol></section></section><section id="aio-big-data"><p>Content from <a href="big-data.html">Big Data</a></p>
 <hr>
-<p>Last updated on 2026-06-25 |
+<p>Last updated on 2026-06-26 |
 
         <a href="https://github.com/ADACS-Australia/2026-HWSA-Workshops/edit/main/episodes/big-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -503,7 +518,7 @@ than the size of the data itself.</p>
 </div>
 </div>
 <p>Essentially you know you need to engage in big data thinking when
-your establisehd workflows break. Sometimes the solutions require new
+your established workflows break. Sometimes the solutions require new
 hardware or software, but sometimes you also need to change how you
 think about a problem or even change the questions that you are asking.
 Your workflows may need changing or updating when any of the items
@@ -517,6 +532,13 @@ to summarize or visualise with existing tools,</li>
 <li>Your data can’t be presented as a table or image, and thus is
 difficult to share in a publication.</li>
 </ol>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> But I can get around these problems… </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div class="accordion-body">
 <p>Each of these breakdowns have simple solutions with significant
 costs:</p>
 <ol style="list-style-type: decimal">
@@ -528,7 +550,7 @@ discoveries.</li>
 step. When you find errors or strange features in your processed data
 you employ post-hoc analysis ‘corrections’ to try and account for these
 features. It becomes difficult to clearly separate real features from
-data processing artefacts. You (and others) are less confident in your
+data processing artifacts. You (and others) are less confident in your
 results.</li>
 <li>You only view/compare a few features at a time to reduce complexity.
 Your results are limited to correlations between the subset of feature
@@ -544,21 +566,7 @@ that particular HDD).</li>
 more common than you would hope. You won’t find such honest descriptions
 or reasoning in most papers, but talk to someone at a conference and
 you’ll soon see how common these solutions are.</p>
-<div id="tools-of-the-trade" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<span class="callout-header">Discussion</span>
-<div id="tools-of-the-trade" class="callout-inner">
-<h3 class="callout-title">Tools of the trade</h3>
-<div class="callout-content">
-<p>In your groups discuss: 1. What software do you use in your research
-for the various activities listed in our workflow? 2. What kinds of big
-data would make these tools less or not useful? 3. Do you have
-alternatives that you could swap to if you needed to work on big
-data?</p>
-<p>Use <a href="https://wooclap.com" class="external-link">Wooclap</a> to list the name of
-your tool, and we’ll select some to explore further as a class.</p>
 </div>
 </div>
 </div>
@@ -753,24 +761,39 @@ already encountering the same underlying problems:</p>
 <div class="callout-content">
 <p>Each group has been given a selection of case studies drawn from
 Astronomy research past and present.</p>
-<p><strong>Part 1</strong>: Choose one of the case studies and identify
-some difficulties faced or limiting factors for this project in relation
-to:</p>
+<p>Choose a case study and:</p>
+<ol style="list-style-type: decimal">
+<li><p>Identify the <em>key pressure point</em> in this project: Where
+does scale, complexity, or time pressure create difficulty?</p></li>
+<li>
+<p>If nothing changes, what fails first? Choose one:</p>
 <ul>
-<li>Collecting, storing or transporting data</li>
-<li>Filtering, calibrating, or processing data</li>
-<li>Visualising data</li>
-<li>Communicating results</li>
+<li>Storage</li>
+<li>Compute</li>
+<li>Data transfer</li>
+<li>Visualisation</li>
+<li>Workflow/process</li>
+<li>Communication/coordination</li>
 </ul>
-<p><strong>Part 2</strong>: Discuss some of the tools that were used in
-or developed for this project.</p>
-<p><strong>Part 3</strong>: For completed projects, if you were to
-re-run this project again today, what would you do differently, what
-would be easier, and would you still consider the project a big data
-project?</p>
+<p>Be prepared to justify your choice.</p>
+</li>
+<li>
+<p>What change would you make to address this? You can change:</p>
+<ul>
+<li>The data (what is stored, reduced, or discarded)</li>
+<li>The workflow (timing, automation, decision-making)</li>
+<li>The tools (algorithms, infrastructure)</li>
+<li>The people/process (roles, communication)</li>
+</ul>
+</li>
+<li><p>What new trade-off does your solution introduce? (What gets worse
+when your fix is applied?)</p></li>
+</ol>
 <p>Join the shared <a href="https://docs.google.com/document/d/1NYZqewnqmAe6zqpz0GgZtAoNvcnOdnZWOiG0ZQERgUc/edit?usp=sharing?tab=t.0" class="external-link">GoogleDoc</a>,
 locate the tab relevant to the case study you have worked on and record
 your answers.</p>
+<p>If you have time, feel free to complete the above for multiple
+aspects of the one project, or for multiple different projects.</p>
 </div>
 </div>
 </div>
@@ -778,53 +801,118 @@ your answers.</p>
 <nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
 <button class="nav-link active" id="nav-tab-1-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-1" type="button" role="tab" aria-controls="nav-tabpanel-1-1" aria-selected="true">
   <h3 class="tab-header" id="nav-tab-heading-1-1">
-  GLEAM
+  The GLEAM Survey
   </h3>
 </button>
 <button class="nav-link" id="nav-tab-1-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-2" type="button" role="tab" aria-controls="nav-tabpanel-1-2" aria-selected="false">
   <h3 class="tab-header" id="nav-tab-heading-1-2">
-  GRB followup (VLA / ATCA)
+  GRB followup with the ATCA and VLA
   </h3>
 </button>
 <button class="nav-link" id="nav-tab-1-3" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-3" type="button" role="tab" aria-controls="nav-tabpanel-1-3" aria-selected="false">
   <h3 class="tab-header" id="nav-tab-heading-1-3">
-  FRB detector (ASKAP)
+  FRB Detection with ASKAP
   </h3>
 </button>
 <button class="nav-link" id="nav-tab-1-4" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-4" type="button" role="tab" aria-controls="nav-tabpanel-1-4" aria-selected="false">
   <h3 class="tab-header" id="nav-tab-heading-1-4">
-  Digitising sky plates
+  Digitising Southern Sky Plates
   </h3>
 </button>
 <button class="nav-link" id="nav-tab-1-5" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-5" type="button" role="tab" aria-controls="nav-tabpanel-1-5" aria-selected="false">
   <h3 class="tab-header" id="nav-tab-heading-1-5">
-  2DF / spectroscopic surveys
+  2QZ Spectroscopic Survey
   </h3>
 </button>
 <button class="nav-link" id="nav-tab-1-6" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-6" type="button" role="tab" aria-controls="nav-tabpanel-1-6" aria-selected="false">
   <h3 class="tab-header" id="nav-tab-heading-1-6">
-  Some simulation work
+  Cosmological Galaxy Formation
   </h3>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
 <div id="nav-tabpanel-1-1" class="tab-pane show active" aria-labelledby="nav-tab-1-1" role="tabpanel">
-<p>details</p>
+<p>The GLEAM survey uses the Murchison Widefield Array to image the
+entire southern sky at low radio frequencies, producing a catalogue of
+hundreds of thousands of sources from petabyte-scale raw data collected
+in repeated drift scans across multiple frequency bands. The data are
+processed through a complex imaging and calibration pipeline, but
+researchers notice that although the images look good, measured source
+fluxes vary by ~20% between observing nights. This raises concerns about
+consistency in calibration, reproducibility of the pipeline, and how
+systematic errors propagate into the final catalogue used for
+science.</p>
+<p>Learn more at: <a href="https://doi.org/10.1093/mnras/stw2337" class="external-link">Hurley-Walker et. al,
+2017</a>, <a href="https://doi.org/10.1017/pasa.2015.26" class="external-link">Wayth et. al,
+2015</a></p>
 </div>
 <div id="nav-tabpanel-1-2" class="tab-pane" aria-labelledby="nav-tab-1-2" role="tabpanel">
-<p>details</p>
+<p>A gamma-ray burst (GRB) is detected by a space telescope, triggering
+a rapid multi-wavelength follow-up campaign involving optical, X-ray,
+and radio observatories. The radio team must decide within 30 minutes
+whether to schedule observations, even though incoming data from other
+facilities arrive asynchronously and in different formats. In a recent
+case, the radio afterglow was detected only weeks later, suggesting that
+earlier observations were missed due to delays in coordination. The
+challenge is not data volume, but how to integrate distributed,
+time-sensitive information to make decisions quickly enough.</p>
+<p>Learn more at: <a href="https://doi.org/10.3847/2041-8213/ad85e9" class="external-link">Anderson et. al,
+2024</a></p>
 </div>
 <div id="nav-tabpanel-1-3" class="tab-pane" aria-labelledby="nav-tab-1-3" role="tabpanel">
-<p>details</p>
+<p>The ASKAP telescope continuously streams radio data at very high
+rates, which are processed in real time by pipelines that search for
+short-duration pulses across thousands of dispersion measures. Because
+of storage limitations, only a tiny fraction of candidate events can be
+saved, and the pipeline must balance sensitivity against false
+positives. In practice, the system detects many spurious signals while
+also missing faint real events, highlighting trade-offs between compute
+throughput, algorithm performance, and long-term data retention.</p>
+<p>Learn more at: <a href="https://doi.org/10.1093/mnras/stad1740" class="external-link">Qiu
+et al. 2023</a></p>
 </div>
 <div id="nav-tabpanel-1-4" class="tab-pane" aria-labelledby="nav-tab-1-4" role="tabpanel">
-<p>details</p>
+<p>Astronomers are digitising a large archive of photographic sky plates
+taken over the past century, including unique observations of the
+southern hemisphere. The project produces billions of source
+measurements and long-term light curves, but many plates have incomplete
+or inconsistent metadata, and calibration across decades is difficult.
+As a result, light curves derived from the digitised data show
+inconsistencies between epochs, raising questions about how to handle
+uncertain metadata, cross-calibrate observations, and prioritise which
+data products are reliable enough for scientific use.</p>
+<p>Learn more at: <a href="https://doi.org/10.1051/0004-6361/202348793" class="external-link">Enke et. al,
+2024</a></p>
 </div>
 <div id="nav-tabpanel-1-5" class="tab-pane" aria-labelledby="nav-tab-1-5" role="tabpanel">
-<p>details</p>
+<p>A large spectroscopic survey using the 2dF instrument collects tens
+of thousands of spectra and derives redshifts to map the large-scale
+structure of the Universe. However, not all spectra yield reliable
+redshifts - around 10-20% are ambiguous or low quality—and different
+teams applying different quality cuts or analysis choices end up with
+inconsistent clustering results from the same dataset. This raises
+issues around data quality, selection effects, and how analysis
+pipelines influence scientific conclusions.</p>
+<p>Learn more at: <a href="https://doi.org/10.1111/j.1365-2966.2004.07619.x" class="external-link">Croom et. al,
+2004</a></p>
 </div>
 <div id="nav-tabpanel-1-6" class="tab-pane" aria-labelledby="nav-tab-1-6" role="tabpanel">
-<p>details more</p>
+<p>A research team runs a large cosmological simulation
+(e.g. IllustrisTNG) to model the formation of galaxies and dark matter
+structures from the early Universe to today. The simulation evolves dark
+matter, gas, stars, and black holes across cosmic time, producing
+snapshots at many time steps along with catalogues of galaxies, halos,
+and merger trees. The full dataset is extremely large (hundreds of
+terabytes to petabyte scale), so only a subset can be downloaded locally
+and most analysis must be done through remote APIs or on shared
+computing systems. Researchers find that different teams analyse
+different subsets or derived products, making it difficult to reproduce
+results or compare analyses consistently. The challenge becomes deciding
+what to store, how to provide access, and how to ensure reproducible
+workflows when the full dataset cannot be easily handled by any
+individual user.</p>
+<p>Learn more at: <a href="https://doi.org/10.1186/s40668-019-0028-x" class="external-link">Nelson et. al,
+2019</a></p>
 </div>
 </div>
 </div>
@@ -1635,6 +1723,9 @@ research.</li>
 </div>
 </div>
 </div>
+<p>For completed projects, if you were to re-run this project again
+today, what would you do differently, what would be easier, and would
+you still consider the project a big data project?</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
