@@ -184,7 +184,8 @@ In increasing order of complexity and overheads, but also flexibility and contro
 
 ```mermaid
 flowchart LR
-    accTitle: {}
+    accTitle: {Workflow managers in increasing order of complexity}
+    accDescr: {Bash, Make, Snakemake, and Nextflow are workflow managers that have an increasing level of complexty and overheads.}
     Bash --> Make --> Snakemake --> Nextflow
 ```
 
