@@ -9,7 +9,7 @@ exercises: 2 # exercise time in minutes
 At this HWSA workshop, [ADACS] will be delivering two sessions:
 
 - "Big data handling for reproducible workflows" (Sections 2-4) will be delivered in the first session Friday Afternoon from 1:30-3:30.
-- "Workflows and reproducibility in practice" (Section 5) will be delivered on Saturday morning from 11:30-12:30.
+- "Workflows and reproducibility in practice" (Section 6) will be delivered on Saturday morning from 11:30-12:30.
 
 Throughout these sessions we will be working in small groups of 3-5 people.
 Within your groups you'll often be asked to discuss a topic, summarize your answers, and then use [Wooclap] or a shared [GoogleDoc] to share your answers with the class.
