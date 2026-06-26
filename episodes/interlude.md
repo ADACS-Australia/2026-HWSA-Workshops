@@ -6,7 +6,7 @@ exercises: 0 # exercise time in minutes
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- What are we doing nex time?
+- What are we doing next time?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
