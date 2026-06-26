@@ -58,7 +58,7 @@ The requirements are:
 
 - The breakfast must be enough for 2 people,
 - Each person will have bacon, scrambled eggs, toast, beans, and coffee,
-- A signle person will be preparing the meal in a home kitchen.
+- A single person will be preparing the meal in a home kitchen.
 
 In your groups, write a workflow that a person can follow.
 

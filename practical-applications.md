@@ -55,7 +55,7 @@ Think about your current or recent project.
 Answer:
 
 - What step would be hardest to repeat?
-- What step only you fully understand?
+- What step do only you fully understand?
 - What would fail if you revisited this in 6 months?
 
 Record your answers in your log book as this will be useful for you to refer to when you are back in the office.

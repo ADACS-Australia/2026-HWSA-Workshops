@@ -50,7 +50,7 @@ flowchart LR
     end
     subgraph analyse ["Analyze Data"]
         direction LR
-        l["visulaize"]
+        l["visualise"]
         m["describe"]
         n["model"]
         o["test hypothesis"]
