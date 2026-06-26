@@ -20,6 +20,13 @@ exercises: 20 # exercise time in minutes
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+
+::: instructor
+
+This session is about how workflows can help manage the complexity of big data problems.
+
+:::
+
 In the previous section we saw an example of a workflow.
 Essentially it was just a flow chart that describes how we do a research project.
 The example was very generic and high level.

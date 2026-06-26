@@ -21,6 +21,13 @@ exercises: 20 # exercise time in minutes
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+
+::: instructor
+
+This section is about how reproducibility is the reason why workflows are so important.
+
+:::
+
 ## Motivation: Why should *you* care about reproducible research?
 
 Most astronomers agree that reproducible research is “a good thing”.
