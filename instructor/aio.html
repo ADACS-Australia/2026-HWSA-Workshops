@@ -295,6 +295,18 @@
 </div>
 <!--/div.accordion-flush-->
 
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="practical-applications.html">5. Workflows and Reproducibility in Practice</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
                 </div>
               </div>
             </div>
@@ -800,22 +812,22 @@ your answers.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-1">
+<div id="nav-tabpanel-1-1" class="tab-pane show active" aria-labelledby="nav-tab-1-1" role="tabpanel">
 <p>details</p>
 </div>
-<div id="nav-tabpanel-1-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-2">
+<div id="nav-tabpanel-1-2" class="tab-pane" aria-labelledby="nav-tab-1-2" role="tabpanel">
 <p>details</p>
 </div>
-<div id="nav-tabpanel-1-3" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-3">
+<div id="nav-tabpanel-1-3" class="tab-pane" aria-labelledby="nav-tab-1-3" role="tabpanel">
 <p>details</p>
 </div>
-<div id="nav-tabpanel-1-4" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-4">
+<div id="nav-tabpanel-1-4" class="tab-pane" aria-labelledby="nav-tab-1-4" role="tabpanel">
 <p>details</p>
 </div>
-<div id="nav-tabpanel-1-5" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-5">
+<div id="nav-tabpanel-1-5" class="tab-pane" aria-labelledby="nav-tab-1-5" role="tabpanel">
 <p>details</p>
 </div>
-<div id="nav-tabpanel-1-6" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-6">
+<div id="nav-tabpanel-1-6" class="tab-pane" aria-labelledby="nav-tab-1-6" role="tabpanel">
 <p>details more</p>
 </div>
 </div>
@@ -827,7 +839,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-workflows"><p>Content from <a href="workflows.html">Workflows</a></p>
 <hr>
-<p>Last updated on 2026-06-25 |
+<p>Last updated on 2026-06-26 |
 
         <a href="https://github.com/ADACS-Australia/2026-HWSA-Workshops/edit/main/episodes/workflows.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 40 minutes</p>
@@ -1074,7 +1086,8 @@ workflow portability</li>
 and control, we have the following options for designing and managing a
 workflow.</p>
 <pre class="mermaid"><code>flowchart LR
-    accTitle: {}
+    accTitle: {Workflow managers in increasing order of complexity}
+    accDescr: {Bash, Make, Snakemake, and Nextflow are workflow managers that have an increasing level of complexty and overheads.}
     Bash --&gt; Make --&gt; Snakemake --&gt; Nextflow</code></pre>
 <ul>
 <li>
@@ -1112,7 +1125,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-reproducible-research"><p>Content from <a href="reproducible-research.html">Reproducible Research</a></p>
 <hr>
-<p>Last updated on 2026-06-17 |
+<p>Last updated on 2026-06-26 |
 
         <a href="https://github.com/ADACS-Australia/2026-HWSA-Workshops/edit/main/episodes/reproducible-research.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 40 minutes</p>
@@ -1127,8 +1140,10 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>What is reproducible research and why should you care?</li>
-<li>What are some common barriers to reproducible research?</li>
+<li>What makes research in astronomy reproducible and reusable in
+practice?</li>
+<li>What small changes can you make now to improve the reproducibility
+and FAIRness of your work?</li>
 </ul>
 </div>
 </div>
@@ -1138,15 +1153,516 @@ any links that you are not going to use.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Define reproducible research in practical terms.</li>
-<li>Explain why reproducibility is critical for credibility, reuse, and
+<li>Describe what reproducible research looks like in an astronomy
+workflow.</li>
+<li>Explain how reproducibility supports reuse, validation, and
 collaboration.</li>
-<li>Identify common barriers (time, skills, tooling, culture).</li>
-<li>Recognise which barriers are most limiting in your own work and
-community.</li>
+<li>Identify a practical minimum standard for reproducible
+research.</li>
+<li>Recognise key elements of FAIR data practices in everyday work.</li>
+<li>Apply one concrete improvement to your own workflow.</li>
 </ul>
 </div>
 </div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="motivation-why-should-you-care-about-reproducible-research">Motivation: Why should <em>you</em> care about reproducible
+research?<a class="anchor" aria-label="anchor" href="#motivation-why-should-you-care-about-reproducible-research"></a>
+</h2>
+<hr class="half-width">
+<p>Most astronomers agree that reproducible research is “a good
+thing”.</p>
+<p>Few astronomers change how they work because of it.</p>
+<p>This lesson starts by being honest about <em>why</em> that is — and
+why, despite this, reproducible practices are often <strong>worth it for
+you personally</strong>, especially if you are a PhD student or
+early‑career researcher (ECR).</p>
+<p>We will talk briefly about benefits to science, but we will focus
+mainly on <strong>short‑term, selfish reasons</strong> that tend to
+matter more day‑to‑day.</p>
+<p>Many of the themes of reproducibility are closely related to the
+concepts of FAIR (Findable / Accessible / Interoperable / Reusable) data
+or software.</p>
+<div class="section level3">
+<h3 id="reproducibility-is-not-just-about-being-virtuous">Reproducibility is not (just) about being virtuous<a class="anchor" aria-label="anchor" href="#reproducibility-is-not-just-about-being-virtuous"></a>
+</h3>
+<p>You will often hear that reproducible research is important because
+it:</p>
+<ul>
+<li>improves trust in science</li>
+<li>allows others to verify your results</li>
+<li>makes research more reliable in the long term</li>
+</ul>
+<p>All of this is true — but for many researchers, these benefits
+feel:</p>
+<ul>
+<li>distant</li>
+<li>abstract</li>
+<li>misaligned with immediate career pressures</li>
+</ul>
+<p>Sarah Wild, in an <a href="https://physicstoday.aip.org/news/irreproducible-astronomy" class="external-link">article
+for physics today</a> describes the concern many astronomers have around
+reproducibility and a potential erosion of trust in science. One of the
+issues she points out is that our current publication systems are based
+on “paper and letter” based communication rather than being designed to
+include the publication of data, methodology as code, and results.</p>
+<p>PhDs and ECRs are usually evaluated on:</p>
+<ul>
+<li>papers</li>
+<li>citations</li>
+<li>finishing projects on time</li>
+<li>surviving supervisor or project changes</li>
+</ul>
+<p>So let’s reframe the question: <strong>What does reproducibility do
+for <em>you</em>, right now?</strong></p>
+</div>
+<div class="section level3">
+<h3 id="selfish-reason-1-reproducibility-saves-you-time">Selfish reason #1: Reproducibility saves <em>you</em> time<a class="anchor" aria-label="anchor" href="#selfish-reason-1-reproducibility-saves-you-time"></a>
+</h3>
+<p>Many researchers first encounter reproducibility as a burden.</p>
+<p>In practice, the opposite is often true.</p>
+<p>Reproducible <em>workflows</em> make it easier to:</p>
+<ul>
+<li>pause and restart work after months away</li>
+<li>recover from broken laptops or lost files</li>
+<li>return to a project after a supervisor, postdoc, or collaborator
+leaves</li>
+<li>debug your own results</li>
+</ul>
+<p>Additionally, a reproducible workflow is easier to incorporate
+different/new data or new analysis techniques than a non-reproducible
+workflow. This means that any future projects which have some
+commonality with your previous projects, will have a head-start and
+lower barrier for entry.</p>
+<p>For PhD students in particular, this matters because:</p>
+<ul>
+<li>projects routinely span multiple years</li>
+<li>interruptions are common (teaching, observing, writing, life)</li>
+<li>memory is unreliable, documentation is not</li>
+<li>future projects will likely build on your thesis work</li>
+</ul>
+<p>A recurring finding in studies of early‑career researchers is that
+reproducible practices <strong>reduce re‑work and dead ends</strong>,
+even when they add a small amount of effort up front.</p>
+<p>Remember: <em>You are the first and most frequent reuser of your own
+code.</em></p>
+<div id="reflection" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="reflection" class="callout-inner">
+<h3 class="callout-title">Reflection</h3>
+<div class="callout-content">
+<p>Have you ever failed to reproduce <em>your own</em> result after a
+few months?</p>
+<p>Use <a href="https://wooclap.com" class="external-link">Wooclap</a> to vote on the
+poll.</p>
+</div>
+</div>
+</div>
+<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
+  <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
+</button>
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div class="accordion-body">
+<p>This is about normalising failure, not blaming individuals.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="selfish-reason-2-reproducible-work-is-easier-to-defend">Selfish reason #2: Reproducible work is easier to defend<a class="anchor" aria-label="anchor" href="#selfish-reason-2-reproducible-work-is-easier-to-defend"></a>
+</h3>
+<p>Scientific results are increasingly scrutinised <em>after</em>
+publication. When your work is questioned, reproducibility acts as
+protection. If you can point to:</p>
+<ul>
+<li>versioned code</li>
+<li>documented data</li>
+<li>clearly stated assumptions and limitations</li>
+</ul>
+<p>then criticism becomes:</p>
+<ul>
+<li>technical, not personal</li>
+<li>something you can respond to, not panic about</li>
+</ul>
+<p>For PhDs and ECRs, this matters because:</p>
+<ul>
+<li>you often have less institutional protection</li>
+<li>you are more exposed to reviewer and community criticism</li>
+<li>technical expectations are higher for more junior researchers</li>
+</ul>
+<p>Result: <strong>Reproducibility shifts risk from “who did this?” to
+“what does the evidence show?”</strong></p>
+</div>
+<div class="section level3">
+<h3 id="selfish-reason-3-reproducible-work-is-cited-more">Selfish reason #3: Reproducible work is cited more<a class="anchor" aria-label="anchor" href="#selfish-reason-3-reproducible-work-is-cited-more"></a>
+</h3>
+<p>This is one of the few incentives with <strong>quantitative
+evidence</strong>.</p>
+<p><a href="https://doi.org/10.1371/journal.pone.0315776" class="external-link">Colavisa et
+al. 2004</a> found that:</p>
+<ul>
+<li>the early release of a publication as a preprint correlates with a
+significant positive citation advantage of about 20.2%,</li>
+<li>sharing data in an online repository correlates with a smaller yet
+still positive citation advantage of 4.3%.</li>
+</ul>
+<p>They did not see a significant citation advantage for papers which
+shared <em>code</em>, but note that “Further research is needed on
+additional or alternative measures of impact beyond citations”.</p>
+<p>This effect has been shown even when controlling for:</p>
+<ul>
+<li>journal impact</li>
+<li>field differences</li>
+<li>publication year</li>
+</ul>
+<p>The takeaway is not “do this to game citations”, but:
+<strong>Visibility and reuse tend to follow clarity and
+accessibility.</strong></p>
+<p>It is already normal practice within astronomy to post pre-prints to
+the <a href="https://arxiv.org/" class="external-link">arXiv</a>, and these findings should
+give us confidence that this is a good practice that should be
+continued.</p>
+<p>In a study by <a href="https://physicstoday.aip.org/news/irreproducible-astronomy" class="external-link">Allen
+et al. 2018</a>, papers from 2015 were scanned for citations and links
+to code. Of the 285 unique codes that were used, 58% offered source code
+for download - not a great success rate. However 90% of the hyperlinks
+to code were found to be still working at the time of the study (three
+years post publication). The lead author, Alice Allen, oversees the <a href="https://ascl.net/" class="external-link">Astrophysics Source Code Library</a> which you
+can think of as “an arXiv for code”, and provides a doi and permalink
+for people to cite code.</p>
+</div>
+<div class="section level3">
+<h3 id="what-happens-when-reproducibility-is-missing">What happens when reproducibility is missing?<a class="anchor" aria-label="anchor" href="#what-happens-when-reproducibility-is-missing"></a>
+</h3>
+<p>Reproducibility failures are rarely dramatic at first. More often,
+they look like:</p>
+<ul>
+<li>results that “can’t quite be repeated”</li>
+<li>figures or tables that cannot be regenerated</li>
+<li>analyses that depend on steps no one can fully reconstruct</li>
+</ul>
+<p>In astronomy research, common failure modes include:</p>
+<ul>
+<li>samples or subsets of data that cannot be regenerated</li>
+<li>results that depend on undocumented filtering or selection
+choices</li>
+<li>discrepancies caused by small differences in processing or
+calibration</li>
+<li>results that change when seemingly minor assumptions are
+corrected</li>
+</ul>
+<p>In many published cases:</p>
+<ul>
+<li>no fraud was involved</li>
+<li>no one acted in bad faith</li>
+<li>the problem was simply undocumented decisions</li>
+</ul>
+<p>For ECRs, the risk is asymmetric:</p>
+<ul>
+<li>the cost of failure is personal and immediate</li>
+<li>the benefit of cutting corners is often short‑lived</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="reproducibility-as-career-insurance">Reproducibility as career insurance<a class="anchor" aria-label="anchor" href="#reproducibility-as-career-insurance"></a>
+</h3>
+<p>It is reasonable to think of reproducibility as a form of insurance.
+You invest a small amount of effort:</p>
+<ul>
+<li>documenting choices</li>
+<li>fixing randomness</li>
+<li>structuring workflows</li>
+</ul>
+<p>In return, you reduce the chance of:</p>
+<ul>
+<li>losing months of work</li>
+<li>being unable to answer basic questions about your own results</li>
+<li>inheriting an unfixable mess (or becoming one)</li>
+</ul>
+<p><strong>Reproducibility is insurance you pay for up front — instead
+of with stress later.</strong></p>
+<div id="take-one-minute-to-think-no-sharing-required" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="take-one-minute-to-think-no-sharing-required" class="callout-inner">
+<h3 class="callout-title">Take one minute to think (no sharing
+required):</h3>
+<div class="callout-content">
+<ul>
+<li>What is one thing in your current workflow that only <em>you</em>
+understand?</li>
+<li>How confident are you that you could rerun your main result in a
+year?</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="practical-takeaways-for-astronomers">Practical takeaways for astronomers<a class="anchor" aria-label="anchor" href="#practical-takeaways-for-astronomers"></a>
+</h2>
+<hr class="half-width">
+<p>Reproducibility and FAIR practices can feel abstract until they are
+translated into concrete actions. We will focus on <strong>practical
+minimum standards</strong> that astronomers can apply immediately,
+without rewriting their entire workflow or becoming software engineers.
+The goal is not perfection. The goal is for our work to be clear,
+honest, and reusable <em>enough</em>.</p>
+<div class="section level3">
+<h3 id="a-minimum-reproducibility-standard">A minimum reproducibility standard<a class="anchor" aria-label="anchor" href="#a-minimum-reproducibility-standard"></a>
+</h3>
+<p>For most astronomy projects, a reasonable minimum standard is
+that:</p>
+<ul>
+<li>you can rerun your own main result</li>
+<li>someone else could rerun it with effort, but without guessing</li>
+<li>limitations are stated explicitly</li>
+</ul>
+<p>In practice, this usually means having:</p>
+<ul>
+<li>versioned code or scripts<br>
+</li>
+<li>recorded configuration choices or parameters<br>
+</li>
+<li>well-defined datasets or sample selection criteria<br>
+</li>
+<li>documented processing or analysis steps<br>
+</li>
+<li>a short description of scope and limitations</li>
+</ul>
+<p><strong>Anything beyond this is a bonus.</strong></p>
+</div>
+<div class="section level3">
+<h3 id="what-to-document-even-if-you-share-nothing-else">What to document (even if you share nothing else)<a class="anchor" aria-label="anchor" href="#what-to-document-even-if-you-share-nothing-else"></a>
+</h3>
+<p>If you only document a few things, make them these:</p>
+<ul>
+<li>
+<strong>Data provenance</strong>
+<ul>
+<li>Where the data came from, including archive, release, selection or
+observation criteria, and any random seeds.</li>
+</ul>
+</li>
+<li>
+<strong>Preprocessing steps</strong>
+<ul>
+<li>What was done to the data before analysis, including filtering,
+calibration, transformations, and any derived quantities</li>
+</ul>
+</li>
+<li>
+<strong>Key assumptions and choices</strong>
+<ul>
+<li>Any decisions that affect the result, such as parameter values,
+selection thresholds, or analysis settings.</li>
+</ul>
+</li>
+<li>
+<strong>Scope and limitations</strong>
+<ul>
+<li>What the analysis was designed to do, and where the results may not
+apply.</li>
+</ul>
+</li>
+</ul>
+<p>This information is often more important than low-level
+implementation details.</p>
+<p>Rule of thumb: <strong>Documentation that answers questions is more
+useful than documentation that looks complete.</strong></p>
+</div>
+<div class="section level3">
+<h3 id="fair-does-not-require-new-infrastructure">FAIR does not require new infrastructure<a class="anchor" aria-label="anchor" href="#fair-does-not-require-new-infrastructure"></a>
+</h3>
+<p>Many astronomers assume FAIR practices require:</p>
+<ul>
+<li>specialised repositories</li>
+<li>complex metadata schemas</li>
+<li>institutional support</li>
+</ul>
+<p>In reality, small steps already help a lot. For example the following
+metadata are a good start:</p>
+<ul>
+<li>a README.md in a Git repository</li>
+<li>a data dictionary for derived features</li>
+<li>a short “how to reproduce Figure 3” note</li>
+<li>a software dependency paragraph in the paper</li>
+</ul>
+<p>FAIRness improves through <strong>clarity</strong>, not tooling.</p>
+<div id="the-fiveminute-readme" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="the-fiveminute-readme" class="callout-inner">
+<h3 class="callout-title">The five‑minute README</h3>
+<div class="callout-content">
+<p>Imagine someone opens your project folder in a year. Write down the
+headings of a README that would help them.</p>
+<p>For example:</p>
+<ul>
+<li>What this project does</li>
+<li>Where the data came from</li>
+<li>How to rerun the main result</li>
+<li>Known limitations</li>
+</ul>
+<p>You do not need to write the content now.</p>
+<p>Just the headings are enough.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="when-full-openness-is-not-possible">When full openness is not possible<a class="anchor" aria-label="anchor" href="#when-full-openness-is-not-possible"></a>
+</h3>
+<p>Sometimes you cannot share:</p>
+<ul>
+<li>proprietary data</li>
+<li>sensitive observations</li>
+<li>intermediate products</li>
+<li>large files</li>
+</ul>
+<p>This does not prevent reproducibility or FAIR alignment. You can
+still:</p>
+<ul>
+<li>describe access conditions</li>
+<li>share code or methods without data</li>
+<li>provide illustrative examples or mock data</li>
+<li>document the full workflow</li>
+</ul>
+<p>Silence is the only irreproducible option.</p>
+</div>
+<div class="section level3">
+<h3 id="reuse-is-where-most-harm-and-benefit-happens">Reuse is where most harm (and benefit) happens<a class="anchor" aria-label="anchor" href="#reuse-is-where-most-harm-and-benefit-happens"></a>
+</h3>
+<p>Most problems arise <em>after</em> publication, when:</p>
+<ul>
+<li>analyses are reused on new datasets<br>
+</li>
+<li>catalogues are treated as ground truth<br>
+</li>
+<li>assumptions are forgotten</li>
+</ul>
+<p>You cannot control all reuse. You can influence it by:</p>
+<ul>
+<li>writing clear limitations</li>
+<li>choosing careful language</li>
+<li>making uncertainty visible</li>
+</ul>
+<p>This protects both downstream users and your future self.</p>
+<div id="one-concrete-improvement" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="one-concrete-improvement" class="callout-inner">
+<h3 class="callout-title">One concrete improvement</h3>
+<div class="callout-content">
+<p>Think about your current or next project.</p>
+<p>Identify one thing you could improve:</p>
+<ul>
+<li>a clearer scope statement</li>
+<li>a fixed random seed</li>
+<li>a short README</li>
+<li>a note on reuse limitations</li>
+</ul>
+<p>Write it down. Do not optimise it. Just commit to doing that one
+thing.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="a-sustainable-mindset">A sustainable mindset<a class="anchor" aria-label="anchor" href="#a-sustainable-mindset"></a>
+</h3>
+<p>Good practice accumulates. Most reproducible workflows were not built
+all at once. They evolved because:</p>
+<ul>
+<li>small habits stuck</li>
+<li>mistakes were documented</li>
+<li>clarity was rewarded</li>
+</ul>
+<p>Progress is incremental!</p>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>Reproducible research makes your work easier to understand, reuse,
+and extend.</li>
+<li>Small, well-documented steps can significantly improve
+reproducibility and FAIRness.</li>
+<li>Clear documentation is more valuable than detailed but incomplete
+records.</li>
+<li>FAIR practices are about clarity and accessibility, not complex
+infrastructure.</li>
+<li>Improving reproducibility is incremental: consistency matters more
+than perfection.</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</div>
+</section></section><section id="aio-practical-applications"><p>Content from <a href="practical-applications.html">Workflows and Reproducibility in Practice</a></p>
+<hr>
+<p>Last updated on 2026-06-26 |
+
+        <a href="https://github.com/ADACS-Australia/2026-HWSA-Workshops/edit/main/episodes/practical-applications.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 60 minutes</p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How do pancakes help me with my research?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Create some take-away actions that are directly relevant to your
+research.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>Don’t let the perfect get in the way of done.</li>
+</ul>
 </div>
 </div>
 </div></section>
@@ -1203,8 +1719,8 @@ community.</li>
   "url": "https://ADACS-Australia.github.io/2026-HWSA-Workshops/instructor/aio.html",
   "identifier": "https://ADACS-Australia.github.io/2026-HWSA-Workshops/instructor/aio.html",
   "dateCreated": "2026-06-17",
-  "dateModified": "2026-06-25",
-  "datePublished": "2026-06-25"
+  "dateModified": "2026-06-26",
+  "datePublished": "2026-06-26"
 }
 
   </script><script>
