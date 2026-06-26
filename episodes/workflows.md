@@ -70,7 +70,6 @@ When complete, write your final workflow on an A4 paper, photograph, and upload 
 
 You may find the following iconography useful:
 
-
 ```mermaid
 
 flowchart TD;
@@ -89,22 +88,6 @@ flowchart TD;
 
 ::: 
 
-
-::: challenge
-
-<h3>Big <del>data</del> breakfast thinking</h3>
-
-Consider the workflow that you created in the previous challenge.
-How would you change the workflow if one of the following changes were needed:
-
-1. The breakfast needed to be prepared in the minimum possible time.
-2. You needed to prepare breakfast for 100 people instead of just 2.
-3. You need to accommodate different preferences for egg/toast/coffee.
-
-Consider changes to inputs, outputs, tools, techniques, and personell.
-
-:::
-
 ## Workflows (for computers)
 
 A workflow for a computer is just a script that you write that details all of the same ideas, but you are working with data as inputs, software as tools, and hardware instead of people.
@@ -114,7 +97,7 @@ This can be done in nearly any language that you choose, and there are even besp
 Many people think that writing a workflow for a computer is hard and avoid it.
 Some common avoidant reasons are:
 
-* "My project isn't beig or complex enough"
+* "My project isn't big or complex enough"
 * "Creating a workflow would take longer than just doing it manually"
 * "I'm only ever going to run this once anyway"
 * "I already use a bunch of different scripts to automate my work"
@@ -122,7 +105,7 @@ Some common avoidant reasons are:
 * "Research is organic, I need flexibility in how I work"
 * "I'll write this all up as a proper workflow after my Thesis is complete"
 
-::: challenge
+<!-- ::: challenge
 
 ## Other totally valid reasons to procrastinate
 
@@ -131,7 +114,7 @@ What other reasons do you have for not using / making a workflow?
 
 Use [Wooclap] to share your answers.
 
-:::
+::: -->
 
 
 One of the main reasons that people avoid creating workflows is because the cost is immediate, but the benefits are delayed.
@@ -141,7 +124,7 @@ However, if you embrace a workflow mindset there is a clear path to success that
 ### Adopting a workflow mindeset
 
 Start any project by recognising that you will *eventually* need to redo everything at least once, but probably many times.
-The most embarassing and confidence destroying thing you can make is rerun your result and get different answers!
+The most embarrassing and confidence destroying thing you can make is rerun your result and get different answers!
 **A workflow makes the redo/retry process more robust**.
 
 For confidence in your work, you should be able to defend every decision made, and you should also be able to track where and when these decisions are made.
@@ -151,7 +134,7 @@ The most valuable resources you have is your *time*.
 Once you have figured out how a part of your research should be done, writing a script to automate it will save you time.
 **A workflow is the ultimate automation and as such will save you time**.
 
-Reserach is inherently cumulative in nature.
+Research is inherently cumulative in nature.
 Your future projects will most likely build upon your past projects.
 **A (modular) workflow can be modified for different inputs, outputs, or methods**.
 This will make your subsequent projects faster to start, again saving you time.
@@ -165,7 +148,7 @@ With all the above in mind here are some recommendations to how you should appro
 
 In a practical sense this would look like:
 
-* Download data manually, do some exploration by hand, and produce a filtered data set that you will use. Recod what you have done in your lab notebook.
+* Download data manually, do some exploration by hand, and produce a filtered data set that you will use. Record what you have done in your lab notebook.
 * Identify tools that will allow you to do the same work that can be used from the command line, and copy all these commands into a text file. Add comments to describe what is being done and why.
 * Convert this text file of commands into a bash script. Often this just means changing the filename / permissions, and adding a `#!` line to the file.
 * Bonus: make the input/output filenames arguments or at least variables that are defined once and used multiple times, so that you can change these easily in the future.
@@ -196,10 +179,26 @@ flowchart LR
     Bash --> Make --> Snakemake --> Nextflow
 ```
 
+
+::: spoiler
+
+## Workflow manager notes
+
 * [Bash] : Simply list all the commands to execute and it's done. No bonus features, literally everything has to be written/managed by you.
-* [Make] : Designed for workflows that have files as input/ouputs (eg compiling code). User defines ruls that map an input to an oput, and Make will decide what needs to be done to reach a particular target output result. Caching, parallelism, and dependency tracking is built in. Syntax is clearly defined but easily forgotten creating a *write only* language situation.
+* [Make] : Designed for workflows that have files as input/outputs (eg compiling code). User defines rules that map an input to an output, and Make will decide what needs to be done to reach a particular target output result. Caching, parallelism, and dependency tracking is built in. Syntax is clearly defined but easily forgotten creating a *write only* language situation.
 * [Snakemake] : Essentially Make but with a much nicer syntax. Easier to configure/limit parallelism, tasks can be generalised more easily. Can create a directed acyclic graph (DAG, a nice workflow graph) that shows the execution plan. Has the ability to do a "dry-run" that will show the commands that would be executed without actually running them.
 * [Nextflow] : A syntax that is similar to Snakemake but which is designed to be easily deployed across various HPC systems. Includes easily configurable use of containerisation, integration with jos schedulers like SLURM, and has a good separation of tasks via working folders. Can pass values between tasks as well as files. The all-singing all-dancing workflow manager.
+
+:::
+
+
+::: keypoints
+
+- A workflow is not extra work — it is how you make your research repeatable, scalable, and understandable.
+- If you can’t clearly describe your workflow (inputs, steps, outputs), you can’t reliably trust or reproduce your results.
+- Workflows save time in the long run by turning ad‑hoc processes into reusable, adaptable systems.
+
+:::
 
 
 [Bash]: https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html
