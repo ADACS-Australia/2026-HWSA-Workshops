@@ -9,7 +9,7 @@ exercises: 20 # exercise time in minutes
 - What makes research in astronomy reproducible and reusable in practice?
 - What small changes can you make now to improve the reproducibility and FAIRness of your work?
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
@@ -19,7 +19,7 @@ exercises: 20 # exercise time in minutes
 - Recognise key elements of FAIR data practices in everyday work.
 - Apply one concrete improvement to your own workflow.
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::
 
 
 ::: instructor
@@ -255,8 +255,6 @@ For example the following metadata are a good start:
 - a software dependency paragraph in the paper
 
 FAIRness improves through **clarity**, not tooling.
-
-:::: challenge
 
 ### When full openness is not possible
 
