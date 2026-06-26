@@ -126,11 +126,11 @@
   HWSA 2026 workshop
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 48%" class="percentage">
-    48%
+<aside class="col-md-12 lesson-progress"><div style="width: 47%" class="percentage">
+    47%
   </div>
   <div class="progress software">
-    <div class="progress-bar software" role="progressbar" style="width: 48%" aria-valuenow="48" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar software" role="progressbar" style="width: 47%" aria-valuenow="47" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -263,7 +263,16 @@ research?</a></li>
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="practical-applications.html">5. Workflows and Reproducibility in Practice</a>
+        <a href="interlude.html">5. Interlude</a>
+    </div><!--/div.accordion-header-->
+
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="practical-applications.html">6. Workflows and Reproducibility in Practice</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -312,7 +321,7 @@ research?</a></li>
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="workflows.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="practical-applications.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="interlude.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -320,8 +329,8 @@ research?</a></li>
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Previous: Workflows
         </a>
-        <a class="chapter-link float-end" href="practical-applications.html" rel="next">
-          Next: Workflows and...
+        <a class="chapter-link float-end" href="interlude.html" rel="next">
+          Next: Interlude...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -473,39 +482,6 @@ protection. If you can point to:</p>
 “what does the evidence show?”</strong></p>
 </div>
 <div class="section level3">
-<h3 id="selfish-reason-3-reproducible-work-is-cited-more">Selfish reason #3: Reproducible work is cited more<a class="anchor" aria-label="anchor" href="#selfish-reason-3-reproducible-work-is-cited-more"></a></h3>
-<p>This is one of the few incentives with <strong>quantitative
-evidence</strong>.</p>
-<p><a href="https://doi.org/10.1371/journal.pone.0315776" class="external-link">Colavisa et
-al. 2004</a> found that:</p>
-<ul><li>the early release of a publication as a preprint correlates with a
-significant positive citation advantage of about 20.2%,</li>
-<li>sharing data in an online repository correlates with a smaller yet
-still positive citation advantage of 4.3%.</li>
-</ul><p>They did not see a significant citation advantage for papers which
-shared <em>code</em>, but note that “Further research is needed on
-additional or alternative measures of impact beyond citations”.</p>
-<p>This effect has been shown even when controlling for:</p>
-<ul><li>journal impact</li>
-<li>field differences</li>
-<li>publication year</li>
-</ul><p>The takeaway is not “do this to game citations”, but:
-<strong>Visibility and reuse tend to follow clarity and
-accessibility.</strong></p>
-<p>It is already normal practice within astronomy to post pre-prints to
-the <a href="https://arxiv.org/" class="external-link">arXiv</a>, and these findings should
-give us confidence that this is a good practice that should be
-continued.</p>
-<p>In a study by <a href="https://physicstoday.aip.org/news/irreproducible-astronomy" class="external-link">Allen
-et al. 2018</a>, papers from 2015 were scanned for citations and links
-to code. Of the 285 unique codes that were used, 58% offered source code
-for download - not a great success rate. However 90% of the hyperlinks
-to code were found to be still working at the time of the study (three
-years post publication). The lead author, Alice Allen, oversees the <a href="https://ascl.net/" class="external-link">Astrophysics Source Code Library</a> which you
-can think of as “an arXiv for code”, and provides a doi and permalink
-for people to cite code.</p>
-</div>
-<div class="section level3">
 <h3 id="what-happens-when-reproducibility-is-missing">What happens when reproducibility is missing?<a class="anchor" aria-label="anchor" href="#what-happens-when-reproducibility-is-missing"></a></h3>
 <p>Reproducibility failures are rarely dramatic at first. More often,
 they look like:</p>
@@ -621,26 +597,6 @@ metadata are a good start:</p>
 <li>a short “how to reproduce Figure 3” note</li>
 <li>a software dependency paragraph in the paper</li>
 </ul><p>FAIRness improves through <strong>clarity</strong>, not tooling.</p>
-<div id="the-fiveminute-readme" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
-</div>
-<span class="callout-header">Discussion</span>
-<div id="the-fiveminute-readme" class="callout-inner">
-<h3 class="callout-title">The five‑minute README</h3>
-<div class="callout-content">
-<p>Imagine someone opens your project folder in a year. Write down the
-headings of a README that would help them.</p>
-<p>For example:</p>
-<ul><li>What this project does</li>
-<li>Where the data came from</li>
-<li>How to rerun the main result</li>
-<li>Known limitations</li>
-</ul><p>You do not need to write the content now.</p>
-<p>Just the headings are enough.</p>
-</div>
-</div>
-</div>
 </div>
 <div class="section level3">
 <h3 id="when-full-openness-is-not-possible">When full openness is not possible<a class="anchor" aria-label="anchor" href="#when-full-openness-is-not-possible"></a></h3>
@@ -668,25 +624,6 @@ still:</p>
 <li>choosing careful language</li>
 <li>making uncertainty visible</li>
 </ul><p>This protects both downstream users and your future self.</p>
-<div id="one-concrete-improvement" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
-</div>
-<span class="callout-header">Discussion</span>
-<div id="one-concrete-improvement" class="callout-inner">
-<h3 class="callout-title">One concrete improvement</h3>
-<div class="callout-content">
-<p>Think about your current or next project.</p>
-<p>Identify one thing you could improve:</p>
-<ul><li>a clearer scope statement</li>
-<li>a fixed random seed</li>
-<li>a short README</li>
-<li>a note on reuse limitations</li>
-</ul><p>Write it down. Do not optimise it. Just commit to doing that one
-thing.</p>
-</div>
-</div>
-</div>
 </div>
 <div class="section level3">
 <h3 id="a-sustainable-mindset">A sustainable mindset<a class="anchor" aria-label="anchor" href="#a-sustainable-mindset"></a></h3>
@@ -724,7 +661,7 @@ any links that you are not going to use.
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="workflows.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="practical-applications.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="interlude.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -732,8 +669,8 @@ any links that you are not going to use.
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Previous: Workflows
         </a>
-        <a class="chapter-link float-end" href="practical-applications.html" rel="next">
-          Next: Workflows and...
+        <a class="chapter-link float-end" href="interlude.html" rel="next">
+          Next: Interlude...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>

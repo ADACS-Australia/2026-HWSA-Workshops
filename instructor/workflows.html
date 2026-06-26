@@ -126,11 +126,11 @@
   HWSA 2026 workshop
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 27%" class="percentage">
-    27%
+<aside class="col-md-12 lesson-progress"><div style="width: 26%" class="percentage">
+    26%
   </div>
   <div class="progress software">
-    <div class="progress-bar software" role="progressbar" style="width: 27%" aria-valuenow="27" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar software" role="progressbar" style="width: 26%" aria-valuenow="26" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -261,7 +261,16 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="practical-applications.html">5. Workflows and Reproducibility in Practice</a>
+        <a href="interlude.html">5. Interlude</a>
+    </div><!--/div.accordion-header-->
+
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="practical-applications.html">6. Workflows and Reproducibility in Practice</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -371,7 +380,7 @@ context.</li>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>This session is about how workflows can help manage the complexity of
 big data problems.</p>
@@ -436,31 +445,6 @@ flowchart TD;
 </div>
 </div>
 </div>
-<div id="discussion2" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
-</div>
-<span class="callout-header">Discussion</span>
-<div class="callout-inner">
-<h3 class="callout-title">Challenge</h3>
-<div class="callout-content">
-<h3>
-Big <del>data</del> breakfast thinking
-</h3>
-<p>Consider the workflow that you created in the previous challenge. How
-would you change the workflow if one of the following changes were
-needed:</p>
-<ol style="list-style-type: decimal"><li>The breakfast needed to be prepared in the minimum possible
-time.</li>
-<li>You needed to prepare breakfast for 100 people instead of just
-2.</li>
-<li>You need to accommodate different preferences for
-egg/toast/coffee.</li>
-</ol><p>Consider changes to inputs, outputs, tools, techniques, and
-personell.</p>
-</div>
-</div>
-</div>
 <section><h2 class="section-heading" id="workflows-for-computers">Workflows (for computers)<a class="anchor" aria-label="anchor" href="#workflows-for-computers"></a></h2>
 <hr class="half-width"><p>A workflow for a computer is just a script that you write that
 details all of the same ideas, but you are working with data as inputs,
@@ -471,7 +455,7 @@ language that you choose, and there are even bespoke languages and tools
 designed for workflow management and orchestration.</p>
 <p>Many people think that writing a workflow for a computer is hard and
 avoid it. Some common avoidant reasons are:</p>
-<ul><li>“My project isn’t beig or complex enough”</li>
+<ul><li>“My project isn’t big or complex enough”</li>
 <li>“Creating a workflow would take longer than just doing it
 manually”</li>
 <li>“I’m only ever going to run this once anyway”</li>
@@ -481,23 +465,16 @@ work”</li>
 <li>“Research is organic, I need flexibility in how I work”</li>
 <li>“I’ll write this all up as a proper workflow after my Thesis is
 complete”</li>
-</ul><div id="other-totally-valid-reasons-to-procrastinate" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
-</div>
-<span class="callout-header">Discussion</span>
-<div id="other-totally-valid-reasons-to-procrastinate" class="callout-inner">
-<h3 class="callout-title">Other totally valid reasons to
-procrastinate</h3>
-<div class="callout-content">
-<p>No doubt you have thought or heard some of these reasons before. What
-other reasons do you have for not using / making a workflow?</p>
-<p>Use <a href="https://wooclap.com" class="external-link">Wooclap</a> to share your
-answers.</p>
-</div>
-</div>
-</div>
-<p>One of the main reasons that people avoid creating workflows is
+</ul><!-- ::: challenge
+
+## Other totally valid reasons to procrastinate
+
+No doubt you have thought or heard some of these reasons before.
+What other reasons do you have for not using / making a workflow?
+
+Use [Wooclap] to share your answers.
+
+::: --><p>One of the main reasons that people avoid creating workflows is
 because the cost is immediate, but the benefits are delayed. Early in
 your project the workflow seems like an overhead that is stifling your
 progress so it’s easy to abandon. However, if you embrace a workflow
@@ -507,7 +484,7 @@ with long term payoff.</p>
 <h3 id="adopting-a-workflow-mindeset">Adopting a workflow mindeset<a class="anchor" aria-label="anchor" href="#adopting-a-workflow-mindeset"></a></h3>
 <p>Start any project by recognising that you will <em>eventually</em>
 need to redo everything at least once, but probably many times. The most
-embarassing and confidence destroying thing you can make is rerun your
+embarrassing and confidence destroying thing you can make is rerun your
 result and get different answers! <strong>A workflow makes the
 redo/retry process more robust</strong>.</p>
 <p>For confidence in your work, you should be able to defend every
@@ -518,7 +495,7 @@ self-documenting record of your methodology</strong>.</p>
 have figured out how a part of your research should be done, writing a
 script to automate it will save you time. <strong>A workflow is the
 ultimate automation and as such will save you time</strong>.</p>
-<p>Reserach is inherently cumulative in nature. Your future projects
+<p>Research is inherently cumulative in nature. Your future projects
 will most likely build upon your past projects. <strong>A (modular)
 workflow can be modified for different inputs, outputs, or
 methods</strong>. This will make your subsequent projects faster to
@@ -533,7 +510,7 @@ support.</li>
 <li>Increase complexity only when you outgrow your current system.</li>
 </ol><p>In a practical sense this would look like:</p>
 <ul><li>Download data manually, do some exploration by hand, and produce a
-filtered data set that you will use. Recod what you have done in your
+filtered data set that you will use. Record what you have done in your
 lab notebook.</li>
 <li>Identify tools that will allow you to do the same work that can be
 used from the command line, and copy all these commands into a text
@@ -575,14 +552,21 @@ workflow.</p>
     accTitle: {Workflow managers in increasing order of complexity}
     accDescr: {Bash, Make, Snakemake, and Nextflow are workflow managers that have an increasing level of complexty and overheads.}
     Bash --&gt; Make --&gt; Snakemake --&gt; Nextflow</code></pre>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Workflow manager notes </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div class="accordion-body">
 <ul><li>
 <a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html" class="external-link">Bash</a>
 : Simply list all the commands to execute and it’s done. No bonus
 features, literally everything has to be written/managed by you.</li>
 <li>
 <a href="https://devdocs.io/gnu_make/" class="external-link">Make</a> : Designed for
-workflows that have files as input/ouputs (eg compiling code). User
-defines ruls that map an input to an oput, and Make will decide what
+workflows that have files as input/outputs (eg compiling code). User
+defines rules that map an input to an output, and Make will decide what
 needs to be done to reach a particular target output result. Caching,
 parallelism, and dependency tracking is built in. Syntax is clearly
 defined but easily forgotten creating a <em>write only</em> language
@@ -602,10 +586,31 @@ containerisation, integration with jos schedulers like SLURM, and has a
 good separation of tasks via working folders. Can pass values between
 tasks as well as files. The all-singing all-dancing workflow
 manager.</li>
-</ul><!--
+</ul></div>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul><li>A workflow is not extra work — it is how you make your research
+repeatable, scalable, and understandable.</li>
+<li>If you can’t clearly describe your workflow (inputs, steps,
+outputs), you can’t reliably trust or reproduce your results.</li>
+<li>Workflows save time in the long run by turning ad‑hoc processes into
+reusable, adaptable systems.</li>
+</ul></div>
+</div>
+</div>
+<!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- --></div>
+ -->
+</div>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/big-data.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
