@@ -549,7 +549,7 @@ difficult to share in a publication.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> But I can get around these problems… </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>Each of these breakdowns have simple solutions with significant
 costs:</p>
@@ -975,14 +975,21 @@ validated.</p>
 <h3 class="callout-title">Workflows (for humans)</h3>
 <div class="callout-content">
 <p>Returning to the recipe analogy we are going to design a workflow for
-making breakfast. The requirements are: - The breakfast must be enough
-for 2 people, - Each person will have bacon, scrambled eggs, toast,
-beans, and coffee, - A signle person will be preparing the meal in a
-home kitchen.</p>
+making breakfast. The requirements are:</p>
+<ul>
+<li>The breakfast must be enough for 2 people,</li>
+<li>Each person will have bacon, scrambled eggs, toast, beans, and
+coffee,</li>
+<li>A signle person will be preparing the meal in a home kitchen.</li>
+</ul>
 <p>In your groups, write a workflow that a person can follow.</p>
-<p>Consider the following questions when designing your workflow: - Is
-order important? - Which tasks depend on each other, and which can be
-done in parallel? - What tools and techniques are required?</p>
+<p>Consider the following questions when designing your workflow:</p>
+<ul>
+<li>Is order important?</li>
+<li>Which tasks depend on each other, and which can be done in
+parallel?</li>
+<li>What tools and techniques are required?</li>
+</ul>
 <p>When complete, write your final workflow on an A4 paper, photograph,
 and upload your answer to the shared <a href="https://docs.google.com/document/d/1NYZqewnqmAe6zqpz0GgZtAoNvcnOdnZWOiG0ZQERgUc/edit?usp=sharing?tab=t.0" class="external-link">GoogleDoc</a>.</p>
 <p>You may find the following iconography useful:</p>
@@ -1126,7 +1133,7 @@ workflow.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Workflow manager notes </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <ul>
 <li>
@@ -1624,9 +1631,13 @@ any links that you are not going to use.
 <hr class="half-width">
 <p>Today we focused on recognising when big data changes the way
 research needs to be done.</p>
-<p>Next session we will focus on practical changes: - documenting data
-provenance - writing a useful README - choosing workflow tools -
-identifying one improvement you can apply immediately</p>
+<p>Next session we will focus on practical changes:</p>
+<ul>
+<li>documenting data provenance</li>
+<li>writing a useful README</li>
+<li>choosing workflow tools</li>
+<li>identifying one improvement you can apply immediately</li>
+</ul>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1681,9 +1692,167 @@ research.</li>
 </div>
 </div>
 </div>
-<p>For completed projects, if you were to re-run this project again
-today, what would you do differently, what would be easier, and would
-you still consider the project a big data project?</p>
+<section><h2 class="section-heading" id="workflows-and-reproducibility-in-practice-small-changes-you-can-make-today">Workflows and Reproducibility in Practice: small changes you can
+make today<a class="anchor" aria-label="anchor" href="#workflows-and-reproducibility-in-practice-small-changes-you-can-make-today"></a>
+</h2>
+<hr class="half-width">
+<p>In the previous session, we saw that:</p>
+<ul>
+<li>big data changes how research is done</li>
+<li>workflows help manage complexity</li>
+<li>reproducibility makes results trustworthy</li>
+</ul>
+<p>In this session, we will focus on a different question: &gt; What
+small changes can you make to your own research this week?</p>
+</section><section><h2 class="section-heading" id="diagnosing-your-current-workflow">Diagnosing your current workflow<a class="anchor" aria-label="anchor" href="#diagnosing-your-current-workflow"></a>
+</h2>
+<hr class="half-width">
+<p>Most workflows fail in predictable ways. Common weak points
+include:</p>
+<ul>
+<li>Data selection is undocumented</li>
+<li>Preprocessing steps are unclear</li>
+<li>Parameters are not recorded</li>
+<li>Results depend on manual steps</li>
+<li>Outputs cannot be regenerated</li>
+</ul>
+<div id="where-will-this-break" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="where-will-this-break" class="callout-inner">
+<h3 class="callout-title">Where will this break?</h3>
+<div class="callout-content">
+<p>(Individually or in small groups) Think about your current or recent
+project. Answer:</p>
+<ul>
+<li>What step would be hardest to repeat?</li>
+<li>What step only you fully understand?</li>
+<li>What would fail if you revisited this in 6 months?</li>
+</ul>
+<p>Record your answers in your log book as this will be useful for you
+to refer to when you are back in the office.</p>
+</div>
+</div>
+</div>
+<div id="the-fiveminute-readme" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="the-fiveminute-readme" class="callout-inner">
+<h3 class="callout-title">The five‑minute README</h3>
+<div class="callout-content">
+<p>Imagine someone opens your project folder in a year (it might even be
+you). Write down the headings of a README that would help them.</p>
+<p>You do not need to write the content now. Just the headings are
+enough.</p>
+</div>
+</div>
+</div>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> A minimal README </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div class="accordion-body">
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a><span class="fu"># Project name</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a><span class="fu">## What this project does</span></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1" aria-label="code-block-1-5"></a></span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1" aria-label="code-block-1-6"></a><span class="fu">## Data sources</span></span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1" aria-label="code-block-1-7"></a></span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1" aria-label="code-block-1-8"></a><span class="fu">## How to reproduce the main result</span></span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1" aria-label="code-block-1-9"></a></span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1" aria-label="code-block-1-10"></a><span class="fu">## Key assumptions</span></span>
+<span id="cb1-11"><a href="#cb1-11" tabindex="-1" aria-label="code-block-1-11"></a></span>
+<span id="cb1-12"><a href="#cb1-12" tabindex="-1" aria-label="code-block-1-12"></a><span class="fu">## Limitations</span></span>
+<span id="cb1-13"><a href="#cb1-13" tabindex="-1" aria-label="code-block-1-13"></a></span>
+<span id="cb1-14"><a href="#cb1-14" tabindex="-1" aria-label="code-block-1-14"></a><span class="fu">## How to cite this work</span></span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="selfish-reason-3-reproducible-work-is-cited-more">Selfish reason #3: Reproducible work is cited more<a class="anchor" aria-label="anchor" href="#selfish-reason-3-reproducible-work-is-cited-more"></a>
+</h3>
+<p>This is one of the few incentives with <strong>quantitative
+evidence</strong>.</p>
+<p><a href="https://doi.org/10.1371/journal.pone.0315776" class="external-link">Colavisa et
+al. 2004</a> found that:</p>
+<ul>
+<li>the early release of a publication as a preprint correlates with a
+significant positive citation advantage of about 20.2%,</li>
+<li>sharing data in an online repository correlates with a smaller yet
+still positive citation advantage of 4.3%.</li>
+</ul>
+<p>They did not see a significant citation advantage for papers which
+shared <em>code</em>, but note that “Further research is needed on
+additional or alternative measures of impact beyond citations”.</p>
+<p>This effect has been shown even when controlling for:</p>
+<ul>
+<li>journal impact</li>
+<li>field differences</li>
+<li>publication year</li>
+</ul>
+<p>The takeaway is not “do this to game citations”, but:
+<strong>Visibility and reuse tend to follow clarity and
+accessibility.</strong></p>
+<p>It is already normal practice within astronomy to post pre-prints to
+the <a href="https://arxiv.org/" class="external-link">arXiv</a>, and these findings should
+give us confidence that this is a good practice that should be
+continued.</p>
+<p>In a study by <a href="https://physicstoday.aip.org/news/irreproducible-astronomy" class="external-link">Allen
+et al. 2018</a>, papers from 2015 were scanned for citations and links
+to code. Of the 285 unique codes that were used, 58% offered source code
+for download - not a great success rate. However 90% of the hyperlinks
+to code were found to be still working at the time of the study (three
+years post publication). The lead author, Alice Allen, oversees the <a href="https://ascl.net/" class="external-link">Astrophysics Source Code Library</a> which you
+can think of as “an arXiv for code”, and provides a doi and permalink
+for people to cite code.</p>
+<div id="one-concrete-improvement" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="one-concrete-improvement" class="callout-inner">
+<h3 class="callout-title">One concrete improvement</h3>
+<div class="callout-content">
+<p>Think about your current or next project.</p>
+<p>Identify one thing you could improve:</p>
+<ul>
+<li>a clearer scope statement</li>
+<li>a fixed random seed</li>
+<li>a short README</li>
+<li>a note on reuse limitations</li>
+</ul>
+<p>Write it down and commit to doing that one thing.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="final-note">Final Note<a class="anchor" aria-label="anchor" href="#final-note"></a>
+</h2>
+<hr class="half-width">
+<p>You do not need:</p>
+<ul>
+<li>perfect workflows</li>
+<li>complex tools</li>
+<li>full automation</li>
+</ul>
+<p>You do need:</p>
+<ul>
+<li>clarity</li>
+<li>consistency</li>
+<li>small, repeatable improvements</li>
+</ul>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1693,10 +1862,16 @@ you still consider the project a big data project?</p>
 <div class="callout-content">
 <ul>
 <li>Don’t let the perfect get in the way of done.</li>
+<li>Your future self is your most important collaborator.</li>
 </ul>
 </div>
 </div>
-</div></section>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section>
 </div>
     </main>
 </div>
