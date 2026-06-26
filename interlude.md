@@ -21,6 +21,7 @@ exercises: 0 # exercise time in minutes
 Today we focused on recognising when big data changes the way research needs to be done.
 
 Next session we will focus on practical changes:
+
 - documenting data provenance
 - writing a useful README
 - choosing workflow tools

@@ -55,6 +55,7 @@ Start with what you know, explore and test new ideas, and then incorporate them 
 
 Returning to the recipe analogy we are going to design a workflow for making breakfast.
 The requirements are:
+
 - The breakfast must be enough for 2 people,
 - Each person will have bacon, scrambled eggs, toast, beans, and coffee,
 - A signle person will be preparing the meal in a home kitchen.
@@ -62,6 +63,7 @@ The requirements are:
 In your groups, write a workflow that a person can follow.
 
 Consider the following questions when designing your workflow:
+
 - Is order important?
 - Which tasks depend on each other, and which can be done in parallel?
 - What tools and techniques are required?
