@@ -9,7 +9,7 @@ exercises: 20 # exercise time in minutes
 - What makes research in astronomy reproducible and reusable in practice?
 - What small changes can you make now to improve the reproducibility and FAIRness of your work?
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
@@ -19,7 +19,7 @@ exercises: 20 # exercise time in minutes
 - Recognise key elements of FAIR data practices in everyday work.
 - Apply one concrete improvement to your own workflow.
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::
 
 
 ::: instructor
@@ -137,33 +137,6 @@ For PhDs and ECRs, this matters because:
 
 Result: **Reproducibility shifts risk from "who did this?" to "what does the evidence show?"**
 
-
-### Selfish reason #3: Reproducible work is cited more
-
-This is one of the few incentives with **quantitative evidence**.
-
-[Colavisa et al. 2004](https://doi.org/10.1371/journal.pone.0315776) found that:
-
-- the early release of a publication as a preprint correlates with a significant positive citation advantage of about 20.2%,
-- sharing data in an online repository correlates with a smaller yet still positive citation advantage of 4.3%.
-
-They did not see a significant citation advantage for papers which shared *code*, but note that "Further research is needed on additional or alternative measures of impact beyond citations".
-
-This effect has been shown even when controlling for:
-
-- journal impact
-- field differences
-- publication year
-
-The takeaway is not "do this to game citations", but:  **Visibility and reuse tend to follow clarity and accessibility.**
-
-It is already normal practice within astronomy to post pre-prints to the [arXiv](https://arxiv.org/), and these findings should give us confidence that this is a good practice that should be continued.
-
-In a study by [Allen et al. 2018](https://physicstoday.aip.org/news/irreproducible-astronomy), papers from 2015 were scanned for citations and links to code.
-Of the 285 unique codes that were used, 58% offered source code for download - not a great success rate.
-However 90% of the hyperlinks to code were found to be still working at the time of the study (three years post publication).
-The lead author, Alice Allen, oversees the [Astrophysics Source Code Library](https://ascl.net/) which you can think of as "an arXiv for code", and provides a doi and permalink for people to cite code.
-
 ### What happens when reproducibility is missing?
 
 Reproducibility failures are rarely dramatic at first.
@@ -175,12 +148,10 @@ More often, they look like:
 
 In astronomy research, common failure modes include:
 
-
 - samples or subsets of data that cannot be regenerated
 - results that depend on undocumented filtering or selection choices
 - discrepancies caused by small differences in processing or calibration
 - results that change when seemingly minor assumptions are corrected
-
 
 In many published cases:
 
@@ -285,26 +256,6 @@ For example the following metadata are a good start:
 
 FAIRness improves through **clarity**, not tooling.
 
-:::: challenge
-
-## The five‑minute README
-
-Imagine someone opens your project folder in a year.
-Write down the headings of a README that would help them.
-
-For example:
-
-- What this project does
-- Where the data came from
-- How to rerun the main result
-- Known limitations
-
-You do not need to write the content now.
-
-Just the headings are enough.
-
-::::
-
 ### When full openness is not possible
 
 Sometimes you cannot share:
@@ -342,25 +293,6 @@ You can influence it by:
 - making uncertainty visible
 
 This protects both downstream users and your future self.
-
-:::: challenge
-
-## One concrete improvement
-
-Think about your current or next project.
-
-Identify one thing you could improve:
-
-- a clearer scope statement
-- a fixed random seed
-- a short README
-- a note on reuse limitations
-
-Write it down.
-Do not optimise it.
-Just commit to doing that one thing.
-
-::::
 
 ### A sustainable mindset
 
