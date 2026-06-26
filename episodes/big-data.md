@@ -20,6 +20,14 @@ exercises: 20 # exercise time in minutes
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+
+::: instructor
+
+This section is about how big data breaks normal ways of working
+
+:::
+
+
 ## Big Data in Astronomy: Scale, Barriers, and Implications
 
 ## What is big data?
@@ -33,7 +41,7 @@ Big data begins when your normal way of working breaks.
 
 :::
 
-Essentially you know you need to engage in big data thinking when your establisehd workflows break.
+Essentially you know you need to engage in big data thinking when your established workflows break.
 Sometimes the solutions require new hardware or software, but sometimes you also need to change how you think about a problem or even change the questions that you are asking.
 Your workflows may need changing or updating when any of the items listed in our example workflow become difficult.
 For example, our normal ways of working could break because:
@@ -43,10 +51,16 @@ For example, our normal ways of working could break because:
 3. The data has high dimensionality or connectivity, and is difficult to summarize or visualise with existing tools,
 4. Your data can't be presented as a table or image, and thus is difficult to share in a publication.
 
+
+
+::: spoiler
+
+## But I can get around these problems...
+
 Each of these breakdowns have simple solutions with significant costs:
 
 1. You work on a subset of the available data. You get results but there is a question around generalization. Small effects and subtle features are not evident in smaller populations, and you miss potential discoveries.
-2. You follow "standard practice" to do a single pass data processing step. When you find errors or strange features in your processed data you employ post-hoc analysis 'corrections' to try and account for these features. It becomes difficult to clearly separate real features from data processing artefacts. You (and others) are less confident in your results.
+2. You follow "standard practice" to do a single pass data processing step. When you find errors or strange features in your processed data you employ post-hoc analysis 'corrections' to try and account for these features. It becomes difficult to clearly separate real features from data processing artifacts. You (and others) are less confident in your results.
 3. You only view/compare a few features at a time to reduce complexity. Your results are limited to correlations between the subset of feature combinations that you have decided to use. Multi-colinear relationships, or even non-linear relationships are not explored and you miss out on a deeper insight into the problem at hand.
 4. You present snapshots of your data in your publication, and leave a data sharing note that asks people to contact you in order to have access to the data you used. (1 year later you move institutes and loose that particular HDD).
 
@@ -54,19 +68,7 @@ Each of these breakdowns have simple solutions with significant costs:
 The "solutions" above are clearly not ideal, but, sadly, they are more common than you would hope.
 You won't find such honest descriptions or reasoning in most papers, but talk to someone at a conference and you'll soon see how common these solutions are.
 
-::: challenge
-
-## Tools of the trade
-
-In your groups discuss:
-1. What software do you use in your research for the various activities listed in our workflow?
-2. What kinds of big data would make these tools less or not useful?
-3. Do you have alternatives that you could swap to if you needed to work on big data?
-
-Use [Wooclap] to list the name of your tool, and we'll select some to explore further as a class.
-
 :::
-
 
 ### What actually goes wrong?
 
@@ -171,6 +173,7 @@ flowchart LR;
 
 
 ### Why this matters to you
+
 You may not be working with petabytes of data.
 But you are likely already encountering the same underlying problems:
 
@@ -184,46 +187,92 @@ But you are likely already encountering the same underlying problems:
 
 Each group has been given a selection of case studies drawn from Astronomy research past and present.
 
-**Part 1**: Choose one of the case studies and identify some difficulties faced or limiting factors for this project in relation to:
+Choose a case study and:
 
-* Collecting, storing or transporting data
-* Filtering, calibrating, or processing data
-* Visualising data
-* Communicating results
- 
-**Part 2**: Discuss some of the tools that were used in or developed for this project. 
 
-**Part 3**: For completed projects, if you were to re-run this project again today, what would you do differently, what would be easier, and would you still consider the project a big data project?
+1. Identify the *key pressure point* in this project:
+   Where does scale, complexity, or time pressure create difficulty?
+
+2. If nothing changes, what fails first?
+   Choose one:
+   - Storage
+   - Compute
+   - Data transfer
+   - Visualisation
+   - Workflow/process
+   - Communication/coordination
+
+   Be prepared to justify your choice.
+
+3. What change would you make to address this?
+   You can change:
+   - The data (what is stored, reduced, or discarded)
+   - The workflow (timing, automation, decision-making)
+   - The tools (algorithms, infrastructure)
+   - The people/process (roles, communication)
+
+4. What new trade-off does your solution introduce?
+   (What gets worse when your fix is applied?)
+
 
 Join the shared [GoogleDoc], locate the tab relevant to the case study you have worked on and record your answers.
+
+If you have time, feel free to complete the above for multiple aspects of the one project, or for multiple different projects.
 
 :::
 
 ::: tab
 
-### GLEAM
+### The GLEAM Survey
 
-details
+The GLEAM survey uses the Murchison Widefield Array to image the entire southern sky at low radio frequencies, producing a catalogue of hundreds of thousands of sources from petabyte-scale raw data collected in repeated drift scans across multiple frequency bands. 
+The data are processed through a complex imaging and calibration pipeline, but researchers notice that although the images look good, measured source fluxes vary by ~20% between observing nights.
+This raises concerns about consistency in calibration, reproducibility of the pipeline, and how systematic errors propagate into the final catalogue used for science.
 
-### GRB followup (VLA / ATCA)
+Learn more at: [Hurley-Walker et. al, 2017](https://doi.org/10.1093/mnras/stw2337), [Wayth et. al, 2015](https://doi.org/10.1017/pasa.2015.26)
 
-details
+### GRB followup with the ATCA and VLA
 
-### FRB detector (ASKAP)
+A gamma-ray burst (GRB) is detected by a space telescope, triggering a rapid multi-wavelength follow-up campaign involving optical, X-ray, and radio observatories.
+The radio team must decide within 30 minutes whether to schedule observations, even though incoming data from other facilities arrive asynchronously and in different formats.
+In a recent case, the radio afterglow was detected only weeks later, suggesting that earlier observations were missed due to delays in coordination.
+The challenge is not data volume, but how to integrate distributed, time-sensitive information to make decisions quickly enough.
 
-details
+Learn more at: [Anderson et. al, 2024](https://doi.org/10.3847/2041-8213/ad85e9)
 
-### Digitising sky plates
+### FRB Detection with ASKAP
 
-details
+The ASKAP telescope continuously streams radio data at very high rates, which are processed in real time by pipelines that search for short-duration pulses across thousands of dispersion measures. 
+Because of storage limitations, only a tiny fraction of candidate events can be saved, and the pipeline must balance sensitivity against false positives.
+In practice, the system detects many spurious signals while also missing faint real events, highlighting trade-offs between compute throughput, algorithm performance, and long-term data retention.
 
-### 2DF / spectroscopic surveys
+Learn more at: [Qiu et al. 2023](https://doi.org/10.1093/mnras/stad1740)
 
-details
+### Digitising Southern Sky Plates
 
-### Some simulation work
+Astronomers are digitising a large archive of photographic sky plates taken over the past century, including unique observations of the southern hemisphere.
+The project produces billions of source measurements and long-term light curves, but many plates have incomplete or inconsistent metadata, and calibration across decades is difficult.
+As a result, light curves derived from the digitised data show inconsistencies between epochs, raising questions about how to handle uncertain metadata, cross-calibrate observations, and prioritise which data products are reliable enough for scientific use.
 
-details more
+Learn more at: [Enke et. al, 2024](https://doi.org/10.1051/0004-6361/202348793)
+
+### 2QZ Spectroscopic Survey
+
+A large spectroscopic survey using the 2dF instrument collects tens of thousands of spectra and derives redshifts to map the large-scale structure of the Universe.
+However, not all spectra yield reliable redshifts - around 10-20% are ambiguous or low quality—and different teams applying different quality cuts or analysis choices end up with inconsistent clustering results from the same dataset.
+This raises issues around data quality, selection effects, and how analysis pipelines influence scientific conclusions.
+
+Learn more at: [Croom et. al, 2004](https://doi.org/10.1111/j.1365-2966.2004.07619.x)
+
+### Cosmological Galaxy Formation
+
+A research team runs a large cosmological simulation (e.g. IllustrisTNG) to model the formation of galaxies and dark matter structures from the early Universe to today.
+The simulation evolves dark matter, gas, stars, and black holes across cosmic time, producing snapshots at many time steps along with catalogues of galaxies, halos, and merger trees.
+The full dataset is extremely large (hundreds of terabytes to petabyte scale), so only a subset can be downloaded locally and most analysis must be done through remote APIs or on shared computing systems.
+Researchers find that different teams analyse different subsets or derived products, making it difficult to reproduce results or compare analyses consistently.
+The challenge becomes deciding what to store, how to provide access, and how to ensure reproducible workflows when the full dataset cannot be easily handled by any individual user.
+
+Learn more at: [Nelson et. al, 2019](https://doi.org/10.1186/s40668-019-0028-x)
 
 :::
 
