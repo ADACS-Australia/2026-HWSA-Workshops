@@ -62,6 +62,47 @@ Record your answers in your log book as this will be useful for you to refer to 
 
 :::
 
+
+## Manual work to work*flow*
+
+Very few (probably zero) research projects start by building a workflow.
+In reality, projects evolve from a mostly manual proof of concept to a semi-automated MVP, and only *eventually* become a fully automated (and documented) workflow.
+In fact most projects don't even make it that far!
+Despite all our motivational talk about workflows and reproducibility, there is no rule that says you *have to* build an automated workflow.
+It just happens that when your project complexity reaches a certain point, you will find yourself better off if you have one.
+
+The typical progression of a workflow is as follows:
+
+1. Manual exploration
+2. Copy commands into a file
+3. Turn into a script
+4. Link scripts together
+5. Add structure (workflow)
+
+The pragmatic approach here is to only add structure when it will benefit your project, and when the cost/benefit of implementation is in your favour.
+Another pragmatic approach is:
+
+> Use simple tools that work, until they don't
+
+A workflow only matters when you need to rerun or trust your results.
+
+## What to document
+
+You do not need to document everything.
+
+Focus on the parts that would stop you from rerunning your work:
+
+- Data sources and versions
+- Key preprocessing steps
+- Important parameters
+- Decisions and assumptions
+
+> Document decisions (the "why"), not just actions (the "what").
+
+
+A fairly natural place to look for documentation in a project is a `README(.md)` file.
+
+
 ::::: challenge
 
 ## The five‑minute README
@@ -72,17 +113,19 @@ Write down the headings of a README that would help them.
 You do not need to write the content now.
 Just the headings are enough.
 
+Use [Wooclap] to record your headings, and vote for others.
+
 ::: spoiler
 
 ## A **minimal** README
 
 ```markdown
 
-# Project name
+# Project name 
 
-## What this project does
+## Project purpose or goals
 
-## Data sources
+## Data sources used
 
 ## How to reproduce the main result
 
@@ -98,7 +141,8 @@ Just the headings are enough.
 
 :::::
 
-### Selfish reason #3: Reproducible work is cited more
+
+<!-- ### Selfish reason #3: Reproducible work is cited more
 
 This is one of the few incentives with **quantitative evidence**.
 
@@ -124,6 +168,8 @@ Of the 285 unique codes that were used, 58% offered source code for download - n
 However 90% of the hyperlinks to code were found to be still working at the time of the study (three years post publication).
 The lead author, Alice Allen, oversees the [Astrophysics Source Code Library](https://ascl.net/) which you can think of as "an arXiv for code", and provides a doi and permalink for people to cite code.
 
+Note that other researchers will fail to cite your work out of lazyness or lack of information more so than any kind of animosity.
+The lesson is then to make it as easy as possible for others to credit your work in the way that is most useful to you. -->
 
 
 :::: challenge
@@ -131,15 +177,16 @@ The lead author, Alice Allen, oversees the [Astrophysics Source Code Library](ht
 ## One concrete improvement
 
 Think about your current or next project.
-
 Identify one thing you could improve:
 
-- a clearer scope statement
-- a fixed random seed
-- a short README
-- a note on reuse limitations
+- Add a README
+- Record a data source
+- Fix a random seed
+- Document a filtering step
+- Script a manual process
 
 Write it down and commit to doing that one thing.
+Share your goals with a colleague so you are more likely to work on them ([it works!](https://doi.org/10.1177/01461672251382271)).
 
 ::::
 
@@ -157,9 +204,23 @@ You do need:
 - consistency
 - small, repeatable improvements
 
+
+::: challenge
+
+## Your final challenge
+
+(Individually or in small groups)
+
+1. Sketch your current workflow
+2. Identify one unclear or fragile step
+3. Define one change that would improve it
+4. Repeat 2-3 as needed
+
+:::
+
 ::: keypoints
 
-- Don't let the perfect get in the way of done.
+- Don't let the perfect be the enemy of done.
 - Your future self is your most important collaborator.
 
 :::
