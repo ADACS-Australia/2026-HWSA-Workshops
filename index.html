@@ -205,12 +205,19 @@
                   <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         Summary and Setup
         </span>
-      
+      </button>
     </div><!--/div.accordion-header-->
+
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
+      <div class="accordion-body">
+        <ul><li><a href="#introduction">Introduction</a></li>
+        </ul></div><!--/div.accordion-body-->
+    </div><!--/div.accordion-collapse-->
 
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -218,7 +225,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="introduction.html">1. Introduction</a>
+        <a href="big-data.html">1. Big Data</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -227,7 +234,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="big-data.html">2. Big Data</a>
+        <a href="workflows.html">2. Workflows</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -236,7 +243,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="workflows.html">3. Workflows</a>
+        <a href="reproducible-research.html">3. Reproducible Research</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -245,7 +252,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="reproducible-research.html">4. Reproducible Research</a>
+        <a href="interlude.html">4. Interlude</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -254,16 +261,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="interlude.html">5. Interlude</a>
-    </div><!--/div.accordion-header-->
-
-  </div><!--/div.accordion-item-->
-</div><!--/div.accordion-flush-->
-
-<div class="accordion accordion-flush" id="accordionFlush7">
-  <div class="accordion-item">
-    <div class="accordion-header" id="flush-heading7">
-        <a href="practical-applications.html">6. Workflows and Reproducibility in Practice</a>
+        <a href="practical-applications.html">5. Workflows and Reproducibility in Practice</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -311,41 +309,60 @@
         <!-- START: inst/pkgdown/templates/content-syllabus.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link float-end" href="introduction.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="big-data.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link float-end" href="introduction.html" rel="next">Next: Introduction... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="big-data.html" rel="next">Next: Big Data... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <hr></nav><main id="main-content" class="main-content"><h1 class="schedule-heading">Summary and Setup</h1>
       
-
-<p>This is a new lesson built with <a href="https://carpentries.github.io/sandpaper-docs" class="external-link">The Carpentries
-Workbench</a>.</p>
-<!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
-
-
-      <section id="setup"><p>No particular setup is required from learners. You will be guided
+<section><h2 class="section-heading" id="setup">Setup<a class="anchor" aria-label="anchor" href="#setup"></a></h2>
+<hr class="half-width"><p>No particular setup is required from learners. You will be guided
 through the lessons by the instructors. All materials required for the
 workshop will be supplied.</p>
-<p>We will be using <a href="https://wooclap.com" class="external-link">Wooclap</a> to manage
-some of the questions and activities in this workshop so please bring a
-device to participate.</p>
+<p>Please bring a device to participate in the online polls and feedback
+components of this workshop.</p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-
-
-      </section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link float-end" href="introduction.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+</section><section id="setup"><section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a></h2>
+<hr class="half-width"><p>At this HWSA workshop, <a href="https://adacs.org.au" class="external-link">ADACS</a> will
+be delivering two sessions:</p>
+<ul><li>“Big data handling for reproducible workflows” (Sections 1-3) will
+be delivered in the first session Friday Afternoon from 1:30-3:30.</li>
+<li>“Workflows and reproducibility in practice” (Section 4) will be
+delivered on Saturday morning from 11:30-12:30.</li>
+</ul><p>Throughout these sessions we will be working in small groups of 3-5
+people. Within your groups you’ll often be asked to discuss a topic,
+summarize your answers, and then use <a href="https://wooclap.com" class="external-link">Wooclap</a> or a shared <a href="https://docs.google.com/document/d/1NYZqewnqmAe6zqpz0GgZtAoNvcnOdnZWOiG0ZQERgUc/edit?usp=sharing?tab=t.0" class="external-link">GoogleDoc</a>
+to share your answers with the class.</p>
+<div id="discussion1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<p>Form into groups of around 4 people, making sure that you have at
+least one person in your group that you haven’t worked with before.</p>
+<p>Once you have formed a group, everyone should give a <strong>15
+second</strong> intro to the group.</p>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
+        <a class="chapter-link float-end" href="big-data.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link float-end" href="introduction.html" rel="next">Next: Introduction... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="big-data.html" rel="next">Next: Big Data... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
     </nav></div>
 <!-- END  : inst/pkgdown/templates/content-syllabus.html -->
@@ -394,8 +411,8 @@ any links that you are not going to use.
   "url": "https://ADACS-Australia.github.io/2026-HWSA-Workshops/index.html",
   "identifier": "https://ADACS-Australia.github.io/2026-HWSA-Workshops/index.html",
   "dateCreated": "2026-06-17",
-  "dateModified": "2026-06-30",
-  "datePublished": "2026-06-30"
+  "dateModified": "2026-07-01",
+  "datePublished": "2026-07-01"
 }
 
   </script><script>
