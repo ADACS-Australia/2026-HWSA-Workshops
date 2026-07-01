@@ -38,7 +38,7 @@ A good workflow should be like a recipe:
 Why are we focusing on workflows?
 Because they help us to:
 
-1. Indentify inputs and dependencies,
+1. Identify inputs and dependencies,
 1. Describe / record our methodology,
 1. Design and improve our research methodology,
 1. Explore alternative hypotheses (using version control),
@@ -123,10 +123,10 @@ One of the main reasons that people avoid creating workflows is because the cost
 Early in your project the workflow seems like an overhead that is stifling your progress so it's easy to abandon.
 However, if you embrace a workflow mindset there is a clear path to success that balances early investment with long term payoff.
 
-### Adopting a workflow mindeset
+### Adopting a workflow mindset
 
 Start any project by recognising that you will *eventually* need to redo everything at least once, but probably many times.
-The most embarrassing and confidence destroying thing you can make is rerun your result and get different answers!
+The most embarrassing and confidence destroying thing you can do is to regenerate your results and get different answers!
 **A workflow makes the redo/retry process more robust**.
 
 For confidence in your work, you should be able to defend every decision made, and you should also be able to track where and when these decisions are made.
@@ -143,20 +143,20 @@ This will make your subsequent projects faster to start, again saving you time.
 
 With all the above in mind here are some recommendations to how you should approach your research workflow development:
 
-1. Start small with simple tools.
-2. Build a modular workflow using whatever tools make sense for each task.
-3. Prioritise languages/tools that have good community or peer support.
-4. Increase complexity only when you outgrow your current system.
+* Start small with simple tools.
+* Build a modular workflow using whatever tools make sense for each task.
+* Prioritise languages/tools that have good community or peer support.
+* Increase complexity only when you outgrow your current system.
 
 In a practical sense this would look like:
 
-* Download data manually, do some exploration by hand, and produce a filtered data set that you will use. Record what you have done in your lab notebook.
-* Identify tools that will allow you to do the same work that can be used from the command line, and copy all these commands into a text file. Add comments to describe what is being done and why.
-* Convert this text file of commands into a bash script. Often this just means changing the filename / permissions, and adding a `#!` line to the file.
-* Bonus: make the input/output filenames arguments or at least variables that are defined once and used multiple times, so that you can change these easily in the future.
-* Move to the analysis stage, again starting with the manual process, then moving to a command line / automated version, and then capturing this in a script.
-* Once you have a few independent scripts, you can build a workflow. This workflow can be as simple as just calling each of the other scripts in order.
-* If/When you find yourself needing to change parameters/options within the scripts, consider turning the scripts into more general use tools or modules.
+1. Download data manually, do some exploration by hand, and produce a filtered data set that you will use. Record what you have done in your lab notebook.
+1. Identify tools that will allow you to do the same work that can be used from the command line, and copy all these commands into a text file. Add comments to describe what is being done and why.
+1. Convert this text file of commands into a bash script. Often this just means changing the filename / permissions, and adding a `#!` line to the file.
+1. Bonus: make the input/output filenames arguments or at least variables that are defined once and used multiple times, so that you can change these easily in the future.
+1. Move to the analysis stage, again starting with the manual process, then moving to a command line / automated version, and then capturing this in a script.
+1. Once you have a few independent scripts, you can build a workflow. This workflow can be as simple as just calling each of the other scripts in order.
+1. If/When you find yourself needing to change parameters/options within the scripts, consider turning the scripts into more general use tools or modules.
 
 
 ### Workflow managers

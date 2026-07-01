@@ -33,6 +33,7 @@ In the previous session, we saw that:
 - reproducibility makes results trustworthy
 
 In this session, we will focus on a different question:
+
 > What small changes can you make to your own research this week?
 
 ## Diagnosing your current workflow
@@ -115,7 +116,7 @@ Just the headings are enough.
 
 Use [Wooclap] to record your headings, and vote for others.
 
-::: spoiler
+::: solution
 
 ## A **minimal** README
 
@@ -209,12 +210,13 @@ You do need:
 
 ## Your final challenge
 
-(Individually or in small groups)
+(With a partner or group of 3)
 
 1. Sketch your current workflow
-2. Identify one unclear or fragile step
-3. Define one change that would improve it
-4. Repeat 2-3 as needed
+1. Describe your workflow to your partner
+1. Have your partner identify and unclear or fagile component
+1. Work with your partner to address the issue
+1. Repeat 2-4 with reversed roles
 
 :::
 

@@ -21,6 +21,61 @@ exercises: 20 # exercise time in minutes
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
+## Background
+
+In this workshop we will be returning to the following flow chart as an example of a generic workflow for research:
+
+```mermaid
+flowchart LR
+    accTitle: {A generic research workflow}
+    accDescr: {A generic research workflow with 4 main sections: obtaining data, preparing data, analyzing data, and communicating results.}
+    subgraph obtain ["Obtain Data"]
+        direction LR
+        a["observe"]
+        b["simulate"]
+        c["literature search"]
+        d["download data"]
+        e["..."]
+    end
+    subgraph prepare ["Prepare Data"]
+        direction LR
+        f["clean"]
+        g["filter"]
+        h["aggregate"]
+        i["classify"]
+        j["process"]
+        k["..."]
+    end
+    subgraph analyse ["Analyze Data"]
+        direction LR
+        l["visualise"]
+        m["describe"]
+        n["model"]
+        o["test hypothesis"]
+        p["draw conclusions"]
+        q["..."]
+    end
+    subgraph publish ["Communicate Results"]
+        direction LR
+        r["article / paper"]
+        s["methods / code"]
+        t["evidence / data"]
+        u["..."]
+    end
+    obtain --> prepare --> analyse --> publish
+```
+
+The workflow above is intentionally generic and hopefully you have experience in doing many of the activities described.
+In your research some or all of the above will be done "by hand" (that is, interactively), at least initially, using existing tools and your local machine (your laptop or work desktop).
+
+The advent of "Big Data" in astronomy hasn't fundamentally changed what the above workflow looks like, however it does change how each of the steps are preformed.
+This will be the focus of today's workshop:
+
+1. What is big data, and how does it change how I do research?
+2. How can we better design, execute, and evaluate workflows?
+3. How do we maintain research best practice when working with big data?
+
+
 ::: instructor
 
 This section is about how big data breaks normal ways of working
@@ -35,11 +90,7 @@ This section is about how big data breaks normal ways of working
 Despite the name, big data is not all about the petabytes.
 In fact, the "big" in big data is more about the scale of the problems caused, than the size of the data itself.
 
-::: callout
-
-Big data begins when your normal way of working breaks.
-
-:::
+> Big data begins when your normal way of working breaks.
 
 Essentially you know you need to engage in big data thinking when your established workflows break.
 Sometimes the solutions require new hardware or software, but sometimes you also need to change how you think about a problem or even change the questions that you are asking.
@@ -47,28 +98,25 @@ Your workflows may need changing or updating when any of the items listed in our
 For example, our normal ways of working could break because:
 
 1. The data are too large to store on your local machine,
-2. The cleaning/filtering process takes many hours to complete,
-3. The data has high dimensionality or connectivity, and is difficult to summarize or visualise with existing tools,
+2. The cleaning/filtering process takes too long to complete,
+3. The data have high dimensionality or connectivity, and is difficult to summarize or visualise with existing tools,
 4. Your data can't be presented as a table or image, and thus is difficult to share in a publication.
 
 
 
-::: spoiler
+### But I can get around these problems...
 
-## But I can get around these problems...
+These problems often have simple solutions—but each comes with a cost:
 
-Each of these breakdowns have simple solutions with significant costs:
+1. **Use less data**: You work on a subset but miss subtle effects and potential discoveries.
+2. **Apply standard pipelines once**: You fix issues later with ad‑hoc corrections and it becomes hard to separate real signals from artefacts.
+3. **Reduce complexity**: You analyse only a few features and miss important relationships.
+4. **Limit sharing** You publish snapshots, not data, so results are hard to verify or reuse (and easily lost).
 
-1. You work on a subset of the available data. You get results but there is a question around generalization. Small effects and subtle features are not evident in smaller populations, and you miss potential discoveries.
-2. You follow "standard practice" to do a single pass data processing step. When you find errors or strange features in your processed data you employ post-hoc analysis 'corrections' to try and account for these features. It becomes difficult to clearly separate real features from data processing artifacts. You (and others) are less confident in your results.
-3. You only view/compare a few features at a time to reduce complexity. Your results are limited to correlations between the subset of feature combinations that you have decided to use. Multi-colinear relationships, or even non-linear relationships are not explored and you miss out on a deeper insight into the problem at hand.
-4. You present snapshots of your data in your publication, and leave a data sharing note that asks people to contact you in order to have access to the data you used. (1 year later you move institutes and loose that particular HDD).
+These approaches avoid big data challenges by accepting limitations.
 
+> Big data thinking doesn’t remove trade-offs, it gives you better ones.
 
-The "solutions" above are clearly not ideal, but, sadly, they are more common than you would hope.
-You won't find such honest descriptions or reasoning in most papers, but talk to someone at a conference and you'll soon see how common these solutions are.
-
-:::
 
 ### What actually goes wrong?
 
@@ -79,7 +127,7 @@ The great news is that the converse is often also true - if you can solve some b
 When you have big data problems the following things happen:
 
 1. You can't open or inspect your data
-    * Files are too large. Data is distributed.
+    * Files are too large. Data are distributed.
     * You cannot "just take a look".
 2. You can't iterate quickly
     * A small change might require hours or days to re-run.
@@ -143,7 +191,7 @@ Some common big data patterns that have been adopted in astronomy are:
     * Analysis happens where the data lives.
     * Attach an HPC to an archive, rather than the inverse.
 3. Pipelines as the primary interface
-    * The raw data is rarely used directly.
+    * The raw data are rarely used directly.
     * Complex pipelines produce calibrated 'science ready' data products.
 4. Long-lived datasets and data releases
     * Results depend on which version of the data you used, and how it was processed.
