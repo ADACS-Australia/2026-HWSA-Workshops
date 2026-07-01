@@ -115,7 +115,7 @@ Just the headings are enough.
 
 Use [Wooclap] to record your headings, and vote for others.
 
-::: spoiler
+::: solution
 
 ## A **minimal** README
 
