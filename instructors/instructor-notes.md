@@ -2,7 +2,9 @@
 title: 'Instructor Notes'
 ---
 
-Instructur notes are included inline with the lessons.
+Instructur notes are included inline with the lessons, and linked below.
+
+Links for interactive components: [Wooclap] and [GoogleDoc]
 
 The general note for instructors is that we are facilitating discussions rather than providing correct answers.
 
