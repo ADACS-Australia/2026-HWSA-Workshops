@@ -35,11 +35,7 @@ This section is about how big data breaks normal ways of working
 Despite the name, big data is not all about the petabytes.
 In fact, the "big" in big data is more about the scale of the problems caused, than the size of the data itself.
 
-::: callout
-
-Big data begins when your normal way of working breaks.
-
-:::
+> Big data begins when your normal way of working breaks.
 
 Essentially you know you need to engage in big data thinking when your established workflows break.
 Sometimes the solutions require new hardware or software, but sometimes you also need to change how you think about a problem or even change the questions that you are asking.
@@ -53,22 +49,19 @@ For example, our normal ways of working could break because:
 
 
 
-::: spoiler
+### But I can get around these problems...
 
-## But I can get around these problems...
+These problems often have simple solutions—but each comes with a cost:
 
-Each of these breakdowns have simple solutions with significant costs:
+1. **Use less data**: You work on a subset but miss subtle effects and potential discoveries.
+2. **Apply standard pipelines once**: You fix issues later with ad‑hoc corrections and it becomes hard to separate real signals from artefacts.
+3. **Reduce complexity**: You analyse only a few features and miss important relationships.
+4. **Limit sharing** You publish snapshots, not data, so results are hard to verify or reuse (and easily lost).
 
-1. You work on a subset of the available data. You get results but there is a question around generalization. Small effects and subtle features are not evident in smaller populations, and you miss potential discoveries.
-2. You follow "standard practice" to do a single pass data processing step. When you find errors or strange features in your processed data you employ post-hoc analysis 'corrections' to try and account for these features. It becomes difficult to clearly separate real features from data processing artifacts. You (and others) are less confident in your results.
-3. You only view/compare a few features at a time to reduce complexity. Your results are limited to correlations between the subset of feature combinations that you have decided to use. Multi-colinear relationships, or even non-linear relationships are not explored and you miss out on a deeper insight into the problem at hand.
-4. You present snapshots of your data in your publication, and leave a data sharing note that asks people to contact you in order to have access to the data you used. (1 year later you move institutes and loose that particular HDD).
+These approaches avoid big data challenges by accepting limitations.
 
+> Big data thinking doesn’t remove trade-offs, it gives you better ones.
 
-The "solutions" above are clearly not ideal, but, sadly, they are more common than you would hope.
-You won't find such honest descriptions or reasoning in most papers, but talk to someone at a conference and you'll soon see how common these solutions are.
-
-:::
 
 ### What actually goes wrong?
 
