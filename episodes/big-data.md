@@ -43,7 +43,7 @@ Your workflows may need changing or updating when any of the items listed in our
 For example, our normal ways of working could break because:
 
 1. The data are too large to store on your local machine,
-2. The cleaning/filtering process takes many hours to complete,
+2. The cleaning/filtering process takes too long to complete,
 3. The data have high dimensionality or connectivity, and is difficult to summarize or visualise with existing tools,
 4. Your data can't be presented as a table or image, and thus is difficult to share in a publication.
 
