@@ -1,5 +1,5 @@
 ---
-title: FIXME
+title: Expected Audience
 ---
 
-This is a placeholder file. Please add content here. 
+It is assumed that participants are PhD students and early-career researchers (ECRs) in astronomy who are actively conducting research and beginning to encounter challenges related to data scale, complexity, and reproducibility.
