@@ -8,6 +8,6 @@ any links that you are not going to use.
 [rstudio]: https://www.rstudio.com/
 [carpentries-workbench]: https://carpentries.github.io/sandpaper-docs/
 
-[Wooclap]: https://wooclap.com
+[Wooclap]: https://app.wooclap.com/OLLGJEI?from=instruction-slide
 [ADACS]: https://adacs.org.au
 [GoogleDoc]: https://docs.google.com/document/d/1NYZqewnqmAe6zqpz0GgZtAoNvcnOdnZWOiG0ZQERgUc/edit?usp=sharing?tab=t.0
