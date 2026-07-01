@@ -44,7 +44,7 @@ For example, our normal ways of working could break because:
 
 1. The data are too large to store on your local machine,
 2. The cleaning/filtering process takes many hours to complete,
-3. The data has high dimensionality or connectivity, and is difficult to summarize or visualise with existing tools,
+3. The data have high dimensionality or connectivity, and is difficult to summarize or visualise with existing tools,
 4. Your data can't be presented as a table or image, and thus is difficult to share in a publication.
 
 
@@ -72,7 +72,7 @@ The great news is that the converse is often also true - if you can solve some b
 When you have big data problems the following things happen:
 
 1. You can't open or inspect your data
-    * Files are too large. Data is distributed.
+    * Files are too large. Data are distributed.
     * You cannot "just take a look".
 2. You can't iterate quickly
     * A small change might require hours or days to re-run.
@@ -136,7 +136,7 @@ Some common big data patterns that have been adopted in astronomy are:
     * Analysis happens where the data lives.
     * Attach an HPC to an archive, rather than the inverse.
 3. Pipelines as the primary interface
-    * The raw data is rarely used directly.
+    * The raw data are rarely used directly.
     * Complex pipelines produce calibrated 'science ready' data products.
 4. Long-lived datasets and data releases
     * Results depend on which version of the data you used, and how it was processed.
