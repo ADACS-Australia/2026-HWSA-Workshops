@@ -220,6 +220,11 @@ You do need:
 
 :::
 
+## One last request
+
+We strive to deliver relevant and engaging workshops.
+Please help us to do so by giving your [feedback](https://forms.gle/f5AN46nzRBQ13nT77).
+
 ::: keypoints
 
 - Don't let the perfect be the enemy of done.
