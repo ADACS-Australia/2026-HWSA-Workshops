@@ -205,6 +205,14 @@ You do need:
 - consistency
 - small, repeatable improvements
 
+::: spoiler
+
+
+## Avoid premature optimisation
+
+[![XKCD guidance for optimisation](fig/xkcd_1205.png)](https://xkcd.com/1205/)
+
+:::
 
 ::: challenge
 
