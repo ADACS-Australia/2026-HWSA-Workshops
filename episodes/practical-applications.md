@@ -222,7 +222,7 @@ You do need:
 
 1. Sketch your current workflow
 1. Describe your workflow to your partner
-1. Have your partner identify and unclear or fagile component
+1. Have your partner identify and unclear or fragile component
 1. Work with your partner to address the issue
 1. Repeat 2-4 with reversed roles
 
